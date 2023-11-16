@@ -13,13 +13,15 @@ const config = {
 		adapter: adapter(),
 
 		alias: {
-			'^assets/*': 'src/assets/*',
+			'^^assets/*': 'src/assets/*',
 
 			'^sections': './src/lib/components/sections',
 			'^layouts': './src/lib/components/layouts',
 			'^types': './src/lib/types',
 			'^data': './src/lib/data',
-			'^helpers': './src/lib/helpers'
+			'^helpers': './src/lib/helpers',
+			'^components': './src/lib/components',
+			'^assets/*': 'src/lib/assets'
 		}
 	},
 

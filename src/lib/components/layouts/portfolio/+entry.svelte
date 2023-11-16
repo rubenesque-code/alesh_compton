@@ -3,6 +3,8 @@
 	import { Header, Footer } from '^sections';
 	import { images } from '$lib/assets/images';
 	import { Image } from '$lib/components';
+	import PortfolioImage from './image.svelte';
+	import PortfolioVideo from './video.svelte';
 </script>
 
 <script lang="ts">
@@ -31,6 +33,8 @@
 			});
 		}
 	}
+
+	let translate = false;
 </script>
 
 <div class="h-screen flex flex-col">
@@ -57,29 +61,15 @@
 					style:height="{imageContainerHeight}px"
 					bind:this={imageScrollNode}
 				>
-					{#each data.media as media}
+					{#each data.media as media, i}
 						{#if media.type === 'image'}
-							<div
-								class="shrink-0"
-								style:height="{media.image.img.h}px"
-								style:max-height="{imageContainerHeight - 20}px"
-								style:aspect-ratio={media.image.img.w / media.image.img.h}
-							>
-								<Image meta={media.image} imageClass="h-full w-full" />
-							</div>
+							<PortfolioImage data={media.image} id={`image-${i}`} bind:imageContainerHeight />
 						{:else}
-							<div
-								class="shrink-0 relative"
-								style:height="{media.image.img.h}px"
-								style:max-height="{imageContainerHeight - 20}px"
-								style:aspect-ratio={16 / 9}
-							>
-								<Image meta={media.image} imageClass="absolute h-full w-full" />
-
-								<div class="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 w-[80px]">
-									<Image meta={images.icon.youtube} imageClass="h-full w-full" />
-								</div>
-							</div>
+							<PortfolioVideo
+								data={media}
+								id={`image-${i}`}
+								bind:imagesContainerHeight={imageContainerHeight}
+							/>
 						{/if}
 					{/each}
 				</div>

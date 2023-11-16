@@ -18,5 +18,13 @@ export const getYoutubeEmbedUrlFromId = (id: string) => {
 	return embedUrl;
 };
 
+export const getYoutubeEmbedFromUrl = (url: string) => {
+	const id = getYoutubeVideoIdFromUrl(url) as string;
+
+	const embedUrl = getYoutubeEmbedUrlFromId(id);
+
+	return embedUrl;
+};
+
 export const getThumbnailFromYoutubeId = (id: string): string =>
 	`https://img.youtube.com/vi/${id}/hqdefault.jpg`;
