@@ -12,10 +12,9 @@
 	export let imagesContainerHeight: number;
 	export let data: Data;
 	export let id: string;
+	export let loading: 'eager' | 'lazy';
 
 	let transformStatus: 'idle' | 'opening' | 'open' | 'closing' = 'idle';
-
-	$: console.log('transformStatus:', transformStatus);
 
 	const [sendImg, receiveImg] = crossfade({
 		duration: 1200,
@@ -66,7 +65,7 @@
 <!-- svelte-ignore a11y-click-events-have-key-events -->
 <!-- svelte-ignore a11y-no-static-element-interactions -->
 <div
-	class="shrink-0 relative"
+	class="shrink-0 relative bg-gray-50"
 	style:height="{data.image.img.h}px"
 	style:max-height="{imagesContainerHeight - 20}px"
 	style:aspect-ratio={16 / 9}
@@ -79,10 +78,10 @@
 			out:sendImg={{ key: id }}
 		>
 			<div class="absolute w-full h-full z-10">
-				<Image meta={data.image} imageClass="h-full w-full object-cover" />
+				<Image meta={data.image} imageClass="h-full w-full object-cover" {loading} />
 
 				<div class="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 w-[80px]">
-					<Image meta={images.icon.youtube} imageClass="h-full w-full" />
+					<Image meta={images.icon.youtube} imageClass="h-full w-full" {loading} />
 				</div>
 			</div>
 		</div>

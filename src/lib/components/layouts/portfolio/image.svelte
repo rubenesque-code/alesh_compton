@@ -10,6 +10,7 @@
 	export let imageContainerHeight: number;
 	export let data: Data['image'];
 	export let id: string;
+	export let loading: 'eager' | 'lazy';
 
 	let transformStatus: 'idle' | 'opening' | 'open' | 'closing' = 'idle';
 
@@ -59,7 +60,7 @@
 <!-- svelte-ignore a11y-click-events-have-key-events -->
 <!-- svelte-ignore a11y-no-static-element-interactions -->
 <div
-	class="shrink-0 relative"
+	class="shrink-0 relative bg-gray-50"
 	style:height="{data.img.h}px"
 	style:max-height="{imageContainerHeight - 20}px"
 	style:aspect-ratio={data.img.w / data.img.h}
@@ -77,7 +78,7 @@
 			in:receiveImg={{ key: id }}
 			out:sendImg={{ key: id }}
 		>
-			<Image meta={data} imageClass="h-full w-full" />
+			<Image meta={data} imageClass="h-full w-full" {loading} />
 		</div>
 	{:else}
 		<div

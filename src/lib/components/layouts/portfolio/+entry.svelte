@@ -1,10 +1,8 @@
 <script lang="ts" context="module">
 	import type { PortfolioData } from '^data/portfolio';
-	import { Header, Footer } from '^sections';
-	import { images } from '$lib/assets/images';
-	import { Image } from '$lib/components';
-	import PortfolioImage from './image.svelte';
-	import PortfolioVideo from './video.svelte';
+	import { Footer, Header } from '^sections';
+	import Image from './image.svelte';
+	import Video from './video.svelte';
 </script>
 
 <script lang="ts">
@@ -33,15 +31,13 @@
 			});
 		}
 	}
-
-	let translate = false;
 </script>
 
-<div class="h-screen flex flex-col">
+<div class="md:h-screen md:flex md:flex-col">
 	<Header />
 
-	<div class="flex-grow pl-md flex gap-xl">
-		<div class="max-w-[405px] shrink-0">
+	<div class="md:flex-grow pl-md pr-md md:pr-0 flex flex-col md:flex-row gap-xl">
+		<div class="md:max-w-[405px] shrink-0">
 			<h1 class="uppercase">{data.title}</h1>
 
 			<br />
@@ -52,7 +48,7 @@
 		</div>
 
 		<div
-			class="relative w-full h-full max-h-full overflow-hidden"
+			class="relative w-full h-[70vh] md:w-full md:h-full md:max-h-full overflow-hidden"
 			bind:clientHeight={imageContainerHeight}
 		>
 			{#if imageContainerHeight}
@@ -63,12 +59,18 @@
 				>
 					{#each data.media as media, i}
 						{#if media.type === 'image'}
-							<PortfolioImage data={media.image} id={`image-${i}`} bind:imageContainerHeight />
+							<Image
+								data={media.image}
+								id={`image-${i}`}
+								bind:imageContainerHeight
+								loading={i === 0 ? 'eager' : 'lazy'}
+							/>
 						{:else}
-							<PortfolioVideo
+							<Video
 								data={media}
 								id={`image-${i}`}
 								bind:imagesContainerHeight={imageContainerHeight}
+								loading={i === 0 ? 'eager' : 'lazy'}
 							/>
 						{/if}
 					{/each}

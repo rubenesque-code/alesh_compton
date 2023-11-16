@@ -10,7 +10,10 @@
 	</div>
 
 	<div class="flex justify-between items-center">
-		<a href="/">Squatumentary</a>
+		<div class="flex items-center gap-sm">
+			<a href="/">Squatumentary</a>
+			<a href="/paintings">Paintings</a>
+		</div>
 	</div>
 </header>
 
