@@ -13,6 +13,7 @@
 		<div class="flex items-center gap-sm">
 			<a href="/">Squatumentary</a>
 			<a href="/paintings">Paintings</a>
+			<a href="/brexit">brexit</a>
 		</div>
 	</div>
 </header>

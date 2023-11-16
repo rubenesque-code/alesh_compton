@@ -86,11 +86,7 @@
 			</div>
 		</div>
 	{:else}
-		<div
-			class="fixed inset-0 z-30 bg-white cursor-zoom-out"
-			on:click={handleClose}
-			transition:fade={{ duration: 400 }}
-		/>
+		<div class="fixed inset-0 z-30 bg-white cursor-zoom-out" transition:fade />
 
 		<div class="fixed inset-0 grid place-items-center z-40 cursor-zoom-out" on:click={handleClose}>
 			<div>
