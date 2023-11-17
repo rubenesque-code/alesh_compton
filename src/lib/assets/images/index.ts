@@ -10,6 +10,8 @@ import { painters_touch } from './painters_touch';
 import { television_god } from './television_god';
 import { various_video } from './various_video';
 
+import { shop } from './shop';
+
 export const images = {
 	squatumentary,
 	paintings,
@@ -19,5 +21,6 @@ export const images = {
 	television_god,
 	various_video,
 	icon,
-	logo
+	logo,
+	shop
 };

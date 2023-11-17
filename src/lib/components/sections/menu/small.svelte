@@ -7,6 +7,9 @@
 		type SwipeParameters
 	} from 'svelte-gestures';
 	import type { Action } from 'svelte/action';
+	import { PaperPlaneRight, InstagramLogo } from 'phosphor-svelte';
+
+	import { contact } from '^data';
 
 	import PageLinks from './page-links.svelte';
 
@@ -70,8 +73,19 @@
 		<div class="flex flex-col items-center gap-md"><PageLinks /></div>
 
 		<div class="mt-xl flex flex-col items-center gap-md">
-			<a class="italic" href="mailto:alesh@aleshcompton.com">alesh@aleshcompton.com</a>
-			<a class="italic" href="https://www.instagram.com/aleshcompton/">@aleshcompton</a>
+			<div class="flex flex-col items-center gap-xxs">
+				<div>
+					<PaperPlaneRight />
+				</div>
+				<a href={`mailto:${contact.email}`}>{contact.email}</a>
+			</div>
+
+			<div class="flex flex-col items-center gap-xxs">
+				<div>
+					<InstagramLogo />
+				</div>
+				<a href={contact.instagram.href}>{contact.instagram.label}</a>
+			</div>
 		</div>
 	</div>
 {/if}

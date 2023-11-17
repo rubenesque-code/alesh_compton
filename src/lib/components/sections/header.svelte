@@ -1,8 +1,5 @@
 <script lang="ts" context="module">
-	import { Image } from '$lib/components';
-	import { images } from '$lib/assets/images';
-
-	import { Small as MenuSmall, Large as MenuLarge } from './menu';
+	import { Large as MenuLarge, Small as MenuSmall } from './menu';
 </script>
 
 <script lang="ts">
@@ -14,7 +11,7 @@
 	bind:clientHeight={headerHeight}
 >
 	<div class="flex items-center gap-xs/sm shrink-0">
-		<Image meta={images.logo} imageClass="w-[30px]" />
+		<div class="w-[30px] h-[26px]" />
 
 		<a class="uppercase tracking-wide" href="/">Alesh Compton</a>
 	</div>
