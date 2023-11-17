@@ -1,26 +1,29 @@
 <script lang="ts" context="module">
 	import { Image } from '$lib/components';
 	import { images } from '$lib/assets/images';
+
+	import { Small as MenuSmall, Large as MenuLarge } from './menu';
 </script>
 
-<header class="shrink-0 flex justify-between items-center px-md py-md">
-	<div class="flex items-center gap-sm">
+<script lang="ts">
+	let headerHeight: number;
+</script>
+
+<header
+	class="shrink-0 flex justify-between items-center px-md py-md"
+	bind:clientHeight={headerHeight}
+>
+	<div class="flex items-center gap-xs/sm">
 		<Image meta={images.logo} imageClass="w-[30px]" />
-		<a href="/">Alesh Compton</a>
+
+		<a class="uppercase tracking-wide" href="/">Alesh Compton</a>
 	</div>
 
-	<div class="flex justify-between items-center">
-		<div class="flex items-center gap-sm">
-			<a href="/">Squatumentary</a>
-			<a href="/paintings">Paintings</a>
-			<a href="/brexit">brexit</a>
-			<a href="/estat-du-france">estat du france</a>
-		</div>
+	<div class="hidden sm:block">
+		<MenuLarge />
+	</div>
+
+	<div class="sm:hidden">
+		<MenuSmall bind:headerHeight />
 	</div>
 </header>
-
-<style>
-	a {
-		@apply uppercase;
-	}
-</style>

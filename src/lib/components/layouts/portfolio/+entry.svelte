@@ -38,7 +38,7 @@
 
 	<div class="md:flex-grow pl-md pr-md md:pr-0 flex flex-col md:flex-row gap-xl">
 		<div class="md:max-w-[405px] shrink-0">
-			<h1 class="uppercase">{data.title}</h1>
+			<h1 class="uppercase tracking-wide">{data.title}</h1>
 
 			<br />
 
