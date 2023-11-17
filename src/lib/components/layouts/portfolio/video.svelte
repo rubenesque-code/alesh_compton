@@ -34,7 +34,7 @@
 
 			transfromedDimensions = calcMaxDimensions({
 				parent: { width: screenWidth, height: containerMaxHeight },
-				child: { width: data.image.img.w, height: data.image.img.h }
+				child: { width: 1280, height: 720 }
 			});
 		}
 	}
@@ -66,7 +66,7 @@
 <!-- svelte-ignore a11y-no-static-element-interactions -->
 <div
 	class="shrink-0 relative bg-gray-50"
-	style:height="{data.image.img.h}px"
+	style:height="{720}px"
 	style:max-height="{imagesContainerHeight - 20}px"
 	style:aspect-ratio={16 / 9}
 >

@@ -35,5 +35,8 @@
 		"vite": "^4.4.2",
 		"vite-imagetools": "^5.0.8"
 	},
-	"type": "module"
+	"type": "module",
+	"dependencies": {
+		"svelte-gestures": "^1.5.2"
+	}
 }

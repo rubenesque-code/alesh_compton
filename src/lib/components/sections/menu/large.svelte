@@ -1,14 +1,9 @@
+<script lang="ts" context="module">
+	import PageLinks from './page-links.svelte';
+</script>
+
 <div class="flex justify-between items-center">
-	<div class="flex items-center gap-md">
-		<a href="/">Squatumentary</a>
-		<a href="/paintings">Paintings</a>
-		<a href="/brexit">brexit</a>
-		<a href="/estat-du-france">estat du france</a>
+	<div class="flex flex-wrap justify-end items-center gap-x-md gap-y-xs">
+		<PageLinks />
 	</div>
 </div>
-
-<style>
-	a {
-		@apply uppercase;
-	}
-</style>

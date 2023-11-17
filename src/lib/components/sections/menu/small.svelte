@@ -1,13 +1,35 @@
-<script lang="ts">
+<script lang="ts" context="module">
 	import { onMount } from 'svelte';
 	import { fly } from 'svelte/transition';
-	import { browser } from '$app/environment';
+	import {
+		swipe as untypedSwipe,
+		type ParametersSwitch,
+		type SwipeParameters
+	} from 'svelte-gestures';
+	import type { Action } from 'svelte/action';
 
+	import PageLinks from './page-links.svelte';
+
+	const swipe: Action<
+		HTMLElement,
+		ParametersSwitch<SwipeParameters>,
+		{
+			'on:swipe': (
+				e: CustomEvent<{
+					[x: string]: string;
+					// detail: { direction: 'left' | 'right' };
+				}>
+			) => void;
+		}
+	> = untypedSwipe as any;
+</script>
+
+<script lang="ts">
 	export let headerHeight: number;
 
 	let screenHeight: number;
 
-	let show = true;
+	let show = false;
 
 	let documentNode: Document;
 
@@ -19,8 +41,10 @@
 		if (documentNode) {
 			if (show) {
 				documentNode.body.style.overflow = 'hidden';
+				documentNode.body.style.userSelect = 'none';
 			} else {
 				documentNode.body.style.overflow = 'auto';
+				documentNode.body.style.userSelect = 'atuo';
 			}
 		}
 	}
@@ -36,13 +60,14 @@
 		style:height="{screenHeight - headerHeight}px"
 		style:top="{headerHeight}px"
 		transition:fly={{ x: '100%' }}
+		use:swipe={{ timeframe: 300, minSwipeDistance: 70, touchAction: 'pan-y' }}
+		on:swipe={(e) => {
+			if (e.detail.direction === 'right') {
+				show = false;
+			}
+		}}
 	>
-		<div class="flex flex-col items-center gap-md">
-			<a href="/">Squatumentary</a>
-			<a href="/paintings">Paintings</a>
-			<a href="/brexit">brexit</a>
-			<a href="/estat-du-france">estat du france</a>
-		</div>
+		<div class="flex flex-col items-center gap-md"><PageLinks /></div>
 
 		<div class="mt-xl flex flex-col items-center gap-md">
 			<a class="italic" href="mailto:alesh@aleshcompton.com">alesh@aleshcompton.com</a>
@@ -57,6 +82,6 @@
 	}
 
 	a {
-		@apply uppercase;
+		@apply uppercase tracking-wide;
 	}
 </style>
