@@ -1,6 +1,8 @@
 <script lang="ts" context="module">
 	import { images } from '^assets/images';
 	import { Image } from '^components';
+
+	import { Clothes } from '^components/+pages/store';
 </script>
 
 <Image meta={images.shop.chain} />
@@ -13,6 +15,6 @@
 
 <Image meta={images.shop.chain} />
 
-<div class="grid grid-cols-4 gap-lg"></div>
+<Clothes />
 
 <Image meta={images.shop.chain} />

@@ -72,7 +72,7 @@
 	>
 		<div class="flex flex-col items-center gap-md"><PageLinks /></div>
 
-		<div class="mt-xl flex flex-col items-center gap-md">
+		<div class="mt-xl mb-lg flex flex-col items-center gap-md">
 			<div class="flex flex-col items-center gap-xxs">
 				<div>
 					<PaperPlaneRight />

@@ -4,7 +4,7 @@
 
 <h1 class="mt-xl text-4xl tracking-wide">FAQ</h1>
 
-<div class="flex flex-col md:flex-row md:justify-between mt-xl pb-xl border-b-4">
+<div class="flex flex-col gap-y-lg md:flex-row md:justify-between mt-xl pb-xl border-b-4">
 	<div class="flex flex-col gap-xs italic">
 		<p>1. Do you ship internationally?</p>
 		<p>2. How should I wash these clothes?</p>
