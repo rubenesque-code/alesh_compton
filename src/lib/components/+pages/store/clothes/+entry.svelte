@@ -83,13 +83,13 @@
 		{#each itemRows as row, i}
 			<div class="flex flex-wrap" style:gap="{gapSize}px">
 				{#each row as item, j}
-					<div style:width="{itemRowsWidths[i][j]}px">
+					<a style:width="{itemRowsWidths[i][j]}px" href={`/store/${item.id.replace(/\s+/g, '-')}`}>
 						<Image meta={item.shopImage} imageClass="" />
 						<div class="flex gap-sm justify-center mt-lg">
 							<p>£{item.price}</p>
 							<p>({item.size})</p>
 						</div>
-					</div>
+					</a>
 				{/each}
 			</div>
 		{/each}

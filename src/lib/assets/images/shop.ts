@@ -1,7 +1,5 @@
 import type { ImgMeta } from '^types';
 
-import chain from '^^assets/images/shop/chain.jpg?w=7162&format=avif;webp;jpg&as=picture&imagetools';
-
 import chinos_l_front from '^^assets/images/shop/clothes/Chinos - L- Front.jpg?w=1901&format=avif;webp;jpg&as=picture&imagetools';
 import chinos_l_rear from '^^assets/images/shop/clothes/Chinos - L- Rear.jpg?w=1615&format=avif;webp;jpg&as=picture&imagetools';
 import chinos_l2_front from '^^assets/images/shop/clothes/Chinos - L2 -Front_.jpg?w=1872&format=avif;webp;jpg&as=picture&imagetools';
@@ -108,8 +106,12 @@ const heading = {
 	trouser: trouser as ImgMeta
 };
 
+import chain from '^^assets/images/shop/chain.jpg?w=7162&format=avif;webp;jpg&as=picture&imagetools';
+import buy_button from '^^assets/images/shop/buy now Button.jpg?w=477&format=avif;webp;jpg&as=picture&imagetools';
+
 export const shop = {
 	chain: chain as ImgMeta,
+	buy_button: buy_button as ImgMeta,
 	clothes,
 	heading
 };
