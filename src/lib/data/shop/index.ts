@@ -13,7 +13,7 @@ export type Cloth = {
 
 export const cloths: Cloth[] = [
 	{
-		id: 'polo-m1',
+		id: 'polo-m3',
 		description: [
 			'REVERSE TO BREAK FREE OF CHAIN',
 			'Cyanotype on Cotton, 1/1',

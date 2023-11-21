@@ -83,8 +83,9 @@
 		{#each itemRows as row, i}
 			<div class="flex flex-wrap" style:gap="{gapSize}px">
 				{#each row as item, j}
-					<a style:width="{itemRowsWidths[i][j]}px" href={`/clothes/${item.id}`}>
+					<a style:width="{itemRowsWidths[i][j]}px" href={`/store/${item.id}`}>
 						<Image meta={item.shopImage} imageClass="" />
+
 						<div class="flex gap-sm justify-center mt-lg">
 							<p>£{item.price}</p>
 							<p>({item.size})</p>
