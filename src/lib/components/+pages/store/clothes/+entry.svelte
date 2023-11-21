@@ -3,7 +3,7 @@
 
 	import { Image } from '^components';
 
-	const gapSize = 80;
+	const gapSize = 100;
 	const paddingSize = 32;
 </script>
 
@@ -17,11 +17,9 @@
 	let itemRows: Cloth[][];
 	let itemRowsWidths: number[][];
 
-	$: console.log('itemRowsWidths:', itemRowsWidths);
-
 	$: {
 		if (windowWidth && containerWidth) {
-			itemsPerRow = windowWidth <= 768 ? 2 : 4;
+			itemsPerRow = windowWidth <= 768 ? 2 : windowWidth < 1200 ? 3 : 4;
 
 			const numGaps = itemsPerRow - 1;
 			const totalGapWidth = numGaps * gapSize;
@@ -87,6 +85,10 @@
 				{#each row as item, j}
 					<div style:width="{itemRowsWidths[i][j]}px">
 						<Image meta={item.shopImage} imageClass="" />
+						<div class="flex gap-sm justify-center mt-lg">
+							<p>£{item.price}</p>
+							<p>({item.size})</p>
+						</div>
 					</div>
 				{/each}
 			</div>

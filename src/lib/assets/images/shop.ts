@@ -32,11 +32,22 @@ import jeans_l_front from '^^assets/images/shop/clothes/Jeans - L- Front.jpg?w=1
 import jeans_m_front from '^^assets/images/shop/clothes/Jeans - M - Front.jpg?w=2453&format=avif;webp;jpg&as=picture&imagetools';
 import jeans_m_rear from '^^assets/images/shop/clothes/Jeans - M - Rear.jpg?w=2242&format=avif;webp;jpg&as=picture&imagetools';
 import jeans_s_front from '^^assets/images/shop/clothes/Jeans - S - Front.jpg?w=1792&format=avif;webp;jpg&as=picture&imagetools';
-import jeans_s_rear from '^^assets/images/shop/clothes/Jeans - S2 - Rear.jpg?w=1645&format=avif;webp;jpg&as=picture&imagetools';
+import jeans_s_rear from '^^assets/images/shop/clothes/Jeans - S - Rear.jpg?w=1645&format=avif;webp;jpg&as=picture&imagetools';
 import jeans_xs_front from '^^assets/images/shop/clothes/Jeans XS- Front.jpg?w=1715&format=avif;webp;jpg&as=picture&imagetools';
 import jeans_xs_rear from '^^assets/images/shop/clothes/Jeans - XS - Rear.jpg?w=1805&format=avif;webp;jpg&as=picture&imagetools';
 import jeans_xs2_front from '^^assets/images/shop/clothes/Jeans - XS2 - Front.jpg?w=1722&format=avif;webp;jpg&as=picture&imagetools';
 import jeans_xs2_rear from '^^assets/images/shop/clothes/Jeans - XS2 - Rear.jpg?w=1959&format=avif;webp;jpg&as=picture&imagetools';
+
+import sweater_l_front from '^^assets/images/shop/clothes/Sweater - L - Front.jpg?w=2737&format=avif;webp;jpg&as=picture&imagetools';
+import sweater_l_rear from '^^assets/images/shop/clothes/Sweater - L - Rear.jpg?w=2680&format=avif;webp;jpg&as=picture&imagetools';
+import sweater_m1_front from '^^assets/images/shop/clothes/Sweater - M1 - Front.jpg?w=2752&format=avif;webp;jpg&as=picture&imagetools';
+import sweater_m1_rear from '^^assets/images/shop/clothes/Sweater - M1 - Rear.jpg?w=2818&format=avif;webp;jpg&as=picture&imagetools';
+import sweater_m2_front from '^^assets/images/shop/clothes/Sweater - M2- Front.jpg?w=2734&format=avif;webp;jpg&as=picture&imagetools';
+import sweater_m2_rear from '^^assets/images/shop/clothes/Sweater - M2- Rear.jpg?w=2824&format=avif;webp;jpg&as=picture&imagetools';
+import sweater_s_front from '^^assets/images/shop/clothes/Sweater - S - Front.jpg?w=2478&format=avif;webp;jpg&as=picture&imagetools';
+import sweater_s_rear from '^^assets/images/shop/clothes/Sweater - S - Rear.jpg?w=2476&format=avif;webp;jpg&as=picture&imagetools';
+import sweater_s2_front from '^^assets/images/shop/clothes/Sweater - S2 - Front.jpg?w=2479&format=avif;webp;jpg&as=picture&imagetools';
+import sweater_s2_rear from '^^assets/images/shop/clothes/Sweater - S2 - Rear.jpg?w=2394&format=avif;webp;jpg&as=picture&imagetools';
 
 const clothes = {
 	chinos_l_front: chinos_l_front as ImgMeta,
@@ -70,7 +81,17 @@ const clothes = {
 	jeans_xs_front: jeans_xs_front as ImgMeta,
 	jeans_xs_rear: jeans_xs_rear as ImgMeta,
 	jeans_xs2_front: jeans_xs2_front as ImgMeta,
-	jeans_xs2_rear: jeans_xs2_rear as ImgMeta
+	jeans_xs2_rear: jeans_xs2_rear as ImgMeta,
+	sweater_l_front: sweater_l_front as ImgMeta,
+	sweater_l_rear: sweater_l_rear as ImgMeta,
+	sweater_m_front: sweater_m1_front as ImgMeta,
+	sweater_m_rear: sweater_m1_rear as ImgMeta,
+	sweater_m2_front: sweater_m2_front as ImgMeta,
+	sweater_m2_rear: sweater_m2_rear as ImgMeta,
+	sweater_s_front: sweater_s_front as ImgMeta,
+	sweater_s_rear: sweater_s_rear as ImgMeta,
+	sweater_s2_front: sweater_s2_front as ImgMeta,
+	sweater_s2_rear: sweater_s2_rear as ImgMeta
 };
 
 import hoodie from '^^assets/images/shop/headings/HOODIE.jpg?w=1286&format=avif;webp;jpg&as=picture&imagetools';

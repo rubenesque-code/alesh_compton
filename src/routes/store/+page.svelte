@@ -7,14 +7,16 @@
 
 <Image meta={images.shop.chain} />
 
-<div class="grid place-items-center p-md">
-	<div class="aspect-video w-full max-w-[1200px] bg-gray-100"></div>
+<div class="pb-xl">
+	<div class="grid place-items-center p-md">
+		<div class="aspect-video w-full max-w-[1200px] bg-gray-100"></div>
 
-	<a class="uppercase mt-md" href="/store/info">Info</a>
+		<a class="uppercase mt-md" href="/store/info">Info</a>
+	</div>
+
+	<Image meta={images.shop.chain} />
+
+	<Clothes />
+
+	<Image meta={images.shop.chain} />
 </div>
-
-<Image meta={images.shop.chain} />
-
-<Clothes />
-
-<Image meta={images.shop.chain} />
