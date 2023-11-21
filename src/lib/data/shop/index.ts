@@ -1,7 +1,7 @@
 import { images } from '^assets/images';
 import type { ImgMeta } from '^types';
 
-type Cloth = {
+export type Cloth = {
 	id: string;
 	description: string[];
 	heading: ImgMeta;
@@ -45,6 +45,15 @@ export const cloths: Cloth[] = [
 	},
 	{
 		id: 'jeans xs',
+		description: ['EXTRAORDINARYJEANS.EBU', 'Cyanotype, 1/1', 'UNIQLO JEANS'],
+		heading: images.shop.heading.jeans,
+		price: 90,
+		size: 'XS',
+		pageImages: [images.shop.clothes.jeans_xs_front, images.shop.clothes.jeans_xs_rear],
+		shopImage: images.shop.clothes.jeans_xs_front
+	},
+	{
+		id: 'jeans xs DEV',
 		description: ['EXTRAORDINARYJEANS.EBU', 'Cyanotype, 1/1', 'UNIQLO JEANS'],
 		heading: images.shop.heading.jeans,
 		price: 90,
