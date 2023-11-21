@@ -19,11 +19,11 @@
 		<a class="uppercase tracking-wide" href="/">Alesh Compton</a>
 	</div>
 
-	<div class="hidden md:block">
+	<div class="hidden md/lg:block">
 		<MenuLarge />
 	</div>
 
-	<div class="md:hidden">
+	<div class="md/lg:hidden">
 		<MenuSmall bind:headerHeight />
 	</div>
 </header>

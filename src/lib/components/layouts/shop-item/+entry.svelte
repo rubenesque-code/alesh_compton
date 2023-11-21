@@ -50,7 +50,7 @@
 
 {#if screenHeight && pageLayoutValues.headerHeight && pageLayoutValues.footerHeight}
 	<div
-		class="px-xl pt-md"
+		class="px-md md:px-xl py-md"
 		style:min-height="{screenHeight -
 			pageLayoutValues.headerHeight -
 			pageLayoutValues.footerHeight}px"
@@ -60,7 +60,7 @@
 			<span class="text-lg">Store</span>
 		</a>
 
-		<div class="w-[300px] mt-lg">
+		<div class="w-[300px] mt-lg" style:aspect-ratio={data.heading.img.w / data.heading.img.h}>
 			<Image meta={data.heading} />
 		</div>
 
@@ -84,7 +84,10 @@
 			</div>
 
 			{#if imageContainerHeight}
-				<div class="flex-grow overflow-auto pb-lg" bind:this={imageScrollNode}>
+				<div
+					class=" mt-sm flex-grow overflow-auto pb-lg hidden md:block"
+					bind:this={imageScrollNode}
+				>
 					<div class="flex gap-md">
 						{#each data.pageImages as image, i}
 							<InteractiveImage
@@ -97,5 +100,13 @@
 				</div>
 			{/if}
 		</div>
+
+		{#if imageContainerHeight}
+			<div class="mt-xl flex flex-col gap-md md:hidden">
+				{#each data.pageImages as image, i}
+					<InteractiveImage data={image} id={`image-${i}`} loading={i === 0 ? 'eager' : 'lazy'} />
+				{/each}
+			</div>
+		{/if}
 	</div>
 {/if}
