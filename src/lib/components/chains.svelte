@@ -17,4 +17,22 @@
 	<div class="shrink-0">
 		<Image meta={images.shop.chain} imageClass="max-h-[40px]" />
 	</div>
+	<div class="shrink-0">
+		<Image meta={images.shop.chain} imageClass="max-h-[40px]" />
+	</div>
+	<div class="shrink-0">
+		<Image meta={images.shop.chain} imageClass="max-h-[40px]" />
+	</div>
+	<div class="shrink-0">
+		<Image meta={images.shop.chain} imageClass="max-h-[40px]" />
+	</div>
+	<div class="shrink-0">
+		<Image meta={images.shop.chain} imageClass="max-h-[40px]" />
+	</div>
+	<div class="shrink-0">
+		<Image meta={images.shop.chain} imageClass="max-h-[40px]" />
+	</div>
+	<div class="shrink-0">
+		<Image meta={images.shop.chain} imageClass="max-h-[40px]" />
+	</div>
 </div>

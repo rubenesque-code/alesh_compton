@@ -8,7 +8,7 @@
 </a>
 
 <div class="flex justify-center">
-	<div class="max-w-[768px]">
+	<div class="max-w-[768px] pt-lg">
 		<slot />
 	</div>
 </div>

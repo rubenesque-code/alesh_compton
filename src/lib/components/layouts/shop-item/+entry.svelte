@@ -50,7 +50,7 @@
 
 {#if screenHeight && pageLayoutValues.headerHeight && pageLayoutValues.footerHeight}
 	<div
-		class="px-md md:px-xl py-md"
+		class="px-md md:px-xl pt-md pb-xl"
 		style:min-height="{screenHeight -
 			pageLayoutValues.headerHeight -
 			pageLayoutValues.footerHeight}px"
@@ -78,7 +78,10 @@
 
 				<p class="text-lg">£{data.price}</p>
 
-				<button class="text-lg w-[100px]">
+				<button
+					class="text-lg w-[100px]"
+					style:aspect-ratio={images.shop.buy_button.img.w / images.shop.buy_button.img.h}
+				>
 					<Image meta={images.shop.buy_button} />
 				</button>
 			</div>

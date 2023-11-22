@@ -92,9 +92,9 @@
 								<Image meta={item.shopImage} imageClass="" />
 							</div>
 
-							<div class="flex gap-sm justify-center mt-lg">
+							<div class="flex flex-wrap gap-x-sm gap-y-xxs justify-center mt-lg">
 								<p>£{item.price}</p>
-								<p>({item.size})</p>
+								<p class="whitespace-nowrap">({item.size})</p>
 							</div>
 						</a>
 					{/each}
