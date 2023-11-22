@@ -3,8 +3,8 @@
 
 	import { Image } from '^components';
 
-	const gapSize = 100;
 	const paddingSize = 32;
+	const gapSize = 60;
 </script>
 
 <script lang="ts">
@@ -81,10 +81,15 @@
 >
 	{#if itemRows && itemRowsWidths}
 		{#each itemRows as row, i}
-			<div class="flex flex-wrap" style:gap="{gapSize}px">
+			<div class="flex justify-between flex-wrap">
 				{#each row as item, j}
-					<a style:width="{itemRowsWidths[i][j]}px" href={`/store/${item.id}`}>
-						<Image meta={item.shopImage} imageClass="" />
+					<a style:width="{itemRowsWidths[i][j] - 2}px" href={`/store/${item.id}`}>
+						<div
+							class="bg-gray-100"
+							style:aspect-ratio={item.shopImage.img.w / item.shopImage.img.h}
+						>
+							<Image meta={item.shopImage} imageClass="" />
+						</div>
 
 						<div class="flex gap-sm justify-center mt-lg">
 							<p>£{item.price}</p>

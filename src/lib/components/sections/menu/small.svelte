@@ -8,6 +8,7 @@
 	} from 'svelte-gestures';
 	import type { Action } from 'svelte/action';
 	import { PaperPlaneRight, InstagramLogo } from 'phosphor-svelte';
+	import { navigating } from '$app/stores';
 
 	import { contact } from '^data';
 
@@ -32,7 +33,7 @@
 
 	let screenHeight: number;
 
-	let show = false;
+	let showMenu = false;
 
 	let documentNode: Document;
 
@@ -42,7 +43,7 @@
 
 	$: {
 		if (documentNode) {
-			if (show) {
+			if (showMenu) {
 				documentNode.body.style.overflow = 'hidden';
 				documentNode.body.style.userSelect = 'none';
 			} else {
@@ -51,13 +52,19 @@
 			}
 		}
 	}
+
+	$: {
+		if ($navigating) {
+			showMenu = false;
+		}
+	}
 </script>
 
 <svelte:window bind:innerHeight={screenHeight} />
 
-<button class="uppercase" on:click={() => (show = !show)} type="button">Menu</button>
+<button class="uppercase" on:click={() => (showMenu = !showMenu)} type="button">Menu</button>
 
-{#if screenHeight && headerHeight && show}
+{#if screenHeight && headerHeight && showMenu}
 	<div
 		class="fixed left-0 w-screen bg-white px-md pt-lg overflow-y-auto"
 		style:height="{screenHeight - headerHeight}px"
@@ -66,7 +73,7 @@
 		use:swipe={{ timeframe: 300, minSwipeDistance: 70, touchAction: 'pan-y' }}
 		on:swipe={(e) => {
 			if (e.detail.direction === 'right') {
-				show = false;
+				showMenu = false;
 			}
 		}}
 	>

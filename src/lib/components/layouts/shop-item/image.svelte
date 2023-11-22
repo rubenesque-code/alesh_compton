@@ -59,7 +59,7 @@
 <!-- svelte-ignore a11y-click-events-have-key-events -->
 <!-- svelte-ignore a11y-no-static-element-interactions -->
 <div
-	class="shrink-0 w-full md:w-[50vw] min-w-[300px] relative bg-gray-50"
+	class="shrink-0 w-full md:w-[50vw] xl:w-auto xl:h-[60vh] xl:min-h-[600px] min-w-[300px] relative bg-gray-50"
 	style:aspect-ratio={data.img.w / data.img.h}
 >
 	{#if transformStatus === 'idle' || transformStatus === 'closing'}

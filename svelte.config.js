@@ -21,8 +21,8 @@ const config = {
 			'^data': './src/lib/data',
 			'^helpers': './src/lib/helpers',
 			'^components': './src/lib/components',
-			'^assets/*': 'src/lib/assets',
-			'^stores/*': 'src/lib/stores'
+			'^stores': 'src/lib/stores',
+			'^assets/*': 'src/lib/assets'
 		}
 	},
 
