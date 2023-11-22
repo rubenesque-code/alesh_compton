@@ -73,31 +73,33 @@
 
 <svelte:window bind:innerWidth={windowWidth} />
 
-<div
-	class="flex flex-col"
-	style:padding="{paddingSize}px"
-	style:gap="{gapSize}px"
-	bind:clientWidth={containerWidth}
->
-	{#if itemRows && itemRowsWidths}
-		{#each itemRows as row, i}
-			<div class="flex justify-between flex-wrap">
-				{#each row as item, j}
-					<a style:width="{itemRowsWidths[i][j] - 2}px" href={`/store/${item.id}`}>
-						<div
-							class="bg-gray-100"
-							style:aspect-ratio={item.shopImage.img.w / item.shopImage.img.h}
-						>
-							<Image meta={item.shopImage} imageClass="" />
-						</div>
+<div class="flex justify-center">
+	<div
+		class="flex flex-col w-full max-w-[2400px]"
+		style:padding="{paddingSize}px"
+		style:gap="{gapSize}px"
+		bind:clientWidth={containerWidth}
+	>
+		{#if itemRows && itemRowsWidths}
+			{#each itemRows as row, i}
+				<div class="flex justify-between flex-wrap">
+					{#each row as item, j}
+						<a style:width="{itemRowsWidths[i][j] - 2}px" href={`/store/${item.id}`}>
+							<div
+								class="bg-gray-100"
+								style:aspect-ratio={item.shopImage.img.w / item.shopImage.img.h}
+							>
+								<Image meta={item.shopImage} imageClass="" />
+							</div>
 
-						<div class="flex gap-sm justify-center mt-lg">
-							<p>£{item.price}</p>
-							<p>({item.size})</p>
-						</div>
-					</a>
-				{/each}
-			</div>
-		{/each}
-	{/if}
+							<div class="flex gap-sm justify-center mt-lg">
+								<p>£{item.price}</p>
+								<p>({item.size})</p>
+							</div>
+						</a>
+					{/each}
+				</div>
+			{/each}
+		{/if}
+	</div>
 </div>

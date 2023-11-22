@@ -9,6 +9,8 @@
 </script>
 
 <script lang="ts">
+	let windowWidth: number | undefined = undefined;
+
 	let storeVideo: StoreVideoState;
 
 	storeVideoStore.subscribe((store) => {
@@ -34,7 +36,14 @@
 			updateStoreVideo.togglePause();
 		}, 50);
 	});
+
+	const src =
+		windowWidth && windowWidth > 768
+			? '/videos/treadmill-optimised_40.webm'
+			: '/videos/treadmill-optimised_60.webm';
 </script>
+
+<svelte:window bind:innerWidth={windowWidth} />
 
 <Image meta={images.shop.chain} />
 
@@ -50,7 +59,7 @@
 				bind:paused
 				on:click={updateStoreVideo.togglePause}
 			>
-				<source src="/videos/treadmill-optimised_30.webm" type="video/webm" />
+				<source {src} type="video/webm" />
 			</video>
 		</div>
 

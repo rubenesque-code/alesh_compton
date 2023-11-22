@@ -6,7 +6,7 @@ export type Cloth = {
 	description: string[];
 	heading: ImgMeta;
 	price: number;
-	size: 'XS' | 'S' | 'M' | 'L' | 'XL';
+	size: string;
 	pageImages: ImgMeta[];
 	shopImage: ImgMeta;
 };
@@ -20,7 +20,7 @@ export const cloths: Cloth[] = [
 			'Gilden Heavyweight'
 		],
 		heading: images.shop.heading.polo,
-		price: 45,
+		price: 35,
 		size: 'M',
 		pageImages: [images.shop.clothes.polo_m3_outside, images.shop.clothes.polo_m3_inside],
 		shopImage: images.shop.clothes.polo_m3_outside
@@ -29,8 +29,8 @@ export const cloths: Cloth[] = [
 		id: 'chinos-xl1',
 		description: ['CAN BE USED IN THE OFFICE/CLUB', 'Cyanotype, 1/1', 'DOCKERS CHINO'],
 		heading: images.shop.heading.trouser,
-		price: 90,
-		size: 'XL',
+		price: 80,
+		size: 'XL - (36x32)',
 		pageImages: [images.shop.clothes.chinos_xl1_front, images.shop.clothes.chinos_xl1_rear],
 		shopImage: images.shop.clothes.chinos_xl1_front
 	},
@@ -38,7 +38,7 @@ export const cloths: Cloth[] = [
 		id: 'hoodie-xl1',
 		description: ['BECOMES STRONGER, WHEN WORN', 'Cyanotype on Cotton, 1/1', 'Gilden Heavyweight'],
 		heading: images.shop.heading.hoodie,
-		price: 120,
+		price: 90,
 		size: 'XL',
 		pageImages: [images.shop.clothes.hoodie_xl_front, images.shop.clothes.hoodie_xl_rear],
 		shopImage: images.shop.clothes.hoodie_xl_front
@@ -47,8 +47,8 @@ export const cloths: Cloth[] = [
 		id: 'jeans-xs',
 		description: ['EXTRAORDINARYJEANS.EBU', 'Cyanotype, 1/1', 'UNIQLO JEANS'],
 		heading: images.shop.heading.jeans,
-		price: 90,
-		size: 'XS',
+		price: 80,
+		size: 'XS - (28x26)',
 		pageImages: [images.shop.clothes.jeans_xs_front, images.shop.clothes.jeans_xs_rear],
 		shopImage: images.shop.clothes.jeans_xs_front
 	},
@@ -60,8 +60,8 @@ export const cloths: Cloth[] = [
 			'UNIQLO JEANS'
 		],
 		heading: images.shop.heading.jeans,
-		price: 90,
-		size: 'S',
+		price: 80,
+		size: 'S - (28x28)',
 		pageImages: [images.shop.clothes.jeans_s_front, images.shop.clothes.jeans_s_rear],
 		shopImage: images.shop.clothes.jeans_s_front
 	},
@@ -69,7 +69,7 @@ export const cloths: Cloth[] = [
 		id: 'hoodie-xl2',
 		description: ['SWIRLY CHAIN HOODIE', 'Cyanotype, 1/1', 'Gilden Heavyweight'],
 		heading: images.shop.heading.hoodie,
-		price: 120,
+		price: 90,
 		size: 'XL',
 		pageImages: [images.shop.clothes.hoodie_xl2_front, images.shop.clothes.hoodie_xl2_rear],
 		shopImage: images.shop.clothes.hoodie_xl2_front
@@ -78,8 +78,8 @@ export const cloths: Cloth[] = [
 		id: 'jeans-xs2',
 		description: ['HEART DETAIL BEHIND', 'Cyanotype, 1/1', 'UNIQLO JEANS'],
 		heading: images.shop.heading.jeans,
-		price: 90,
-		size: 'XS',
+		price: 80,
+		size: 'XS - (24x25)',
 		pageImages: [images.shop.clothes.jeans_xs2_front, images.shop.clothes.jeans_xs2_rear],
 		shopImage: images.shop.clothes.jeans_xs2_front
 	},
@@ -87,7 +87,7 @@ export const cloths: Cloth[] = [
 		id: 'sweater-m1',
 		description: ['STAR ON BACK', 'Cyanotype, 1/1', 'GILDAN HEAVYWEIGHT'],
 		heading: images.shop.heading.sweater,
-		price: 70,
+		price: 60,
 		size: 'M',
 		pageImages: [images.shop.clothes.sweater_m_front, images.shop.clothes.sweater_m_rear],
 		shopImage: images.shop.clothes.sweater_m_front
@@ -100,7 +100,7 @@ export const cloths: Cloth[] = [
 			'Gilden Heavyweight'
 		],
 		heading: images.shop.heading.sweater,
-		price: 45,
+		price: 35,
 		size: 'M',
 		pageImages: [images.shop.clothes.polo_m1_inside, images.shop.clothes.polo_m1_outside],
 		shopImage: images.shop.clothes.polo_m1_inside
@@ -109,7 +109,7 @@ export const cloths: Cloth[] = [
 		id: 'sweater-l',
 		description: ['LOVE STORY', 'Cyanotype, 1/1', 'GILDAN HEAVYWEIGHT'],
 		heading: images.shop.heading.sweater,
-		price: 70,
+		price: 60,
 		size: 'L',
 		pageImages: [images.shop.clothes.sweater_l_front, images.shop.clothes.sweater_l_rear],
 		shopImage: images.shop.clothes.sweater_l_front
@@ -118,8 +118,8 @@ export const cloths: Cloth[] = [
 		id: 'chinos-l',
 		description: ['GUCCI??', 'Cyanotype, 1/1', 'GAP CHINO'],
 		heading: images.shop.heading.trouser,
-		price: 90,
-		size: 'L',
+		price: 80,
+		size: 'L - (34x32)',
 		pageImages: [images.shop.clothes.chinos_l_front, images.shop.clothes.chinos_l_rear],
 		shopImage: images.shop.clothes.chinos_l_front
 	},
@@ -127,7 +127,7 @@ export const cloths: Cloth[] = [
 		id: 'sweater-s',
 		description: ['LEGENDARYSWEATERS.ORG', 'Cyanotype, 1/1', 'GILDAN HEAVYWEIGHT'],
 		heading: images.shop.heading.sweater,
-		price: 70,
+		price: 60,
 		size: 'S',
 		pageImages: [images.shop.clothes.sweater_s_front, images.shop.clothes.sweater_s_rear],
 		shopImage: images.shop.clothes.sweater_s_front
@@ -136,8 +136,8 @@ export const cloths: Cloth[] = [
 		id: 'jeans-m',
 		description: ['STRAIGHT CHAIN', 'Cyanotype, 1/1', 'UNIQLO jeans'],
 		heading: images.shop.heading.jeans,
-		price: 90,
-		size: 'M',
+		price: 80,
+		size: 'M - (29x28)',
 		pageImages: [images.shop.clothes.jeans_m_front, images.shop.clothes.jeans_m_rear],
 		shopImage: images.shop.clothes.jeans_m_front
 	},
@@ -145,7 +145,7 @@ export const cloths: Cloth[] = [
 		id: 'sweater-s2',
 		description: ['STAR STORY', 'Cyanotype, 1/1', 'GILDAN HEAVYWEIGHT'],
 		heading: images.shop.heading.sweater,
-		price: 70,
+		price: 60,
 		size: 'S',
 		pageImages: [images.shop.clothes.sweater_s2_front, images.shop.clothes.sweater_s2_rear],
 		shopImage: images.shop.clothes.sweater_s2_front
@@ -154,7 +154,7 @@ export const cloths: Cloth[] = [
 		id: 'polo-xs',
 		description: [';)', 'Cyanotype, 1/1', 'Gilden Heavyweight'],
 		heading: images.shop.heading.polo,
-		price: 45,
+		price: 35,
 		size: 'XS',
 		pageImages: [images.shop.clothes.polo_xs_inside, images.shop.clothes.polo_xs_outside],
 		shopImage: images.shop.clothes.polo_xs_inside
@@ -163,8 +163,8 @@ export const cloths: Cloth[] = [
 		id: 'jeans-l',
 		description: ['GOOD OPPERTUNITY FOR TEAM PHOTO', 'Cyanotype, 1/1', 'UNIQLO JEANS'],
 		heading: images.shop.heading.jeans,
-		price: 90,
-		size: 'L',
+		price: 80,
+		size: 'L - (32x30)',
 		pageImages: [images.shop.clothes.jeans_l_front, images.shop.clothes.jeans_l_rear],
 		shopImage: images.shop.clothes.jeans_l_front
 	},
@@ -173,7 +173,7 @@ export const cloths: Cloth[] = [
 		id: 'sweater-m2',
 		description: ['<3', 'Cyanotype, 1/1', 'GILDAN HEAVYWEIGHT'],
 		heading: images.shop.heading.sweater,
-		price: 70,
+		price: 60,
 		size: 'M',
 		pageImages: [images.shop.clothes.sweater_m2_front, images.shop.clothes.sweater_m2_rear],
 		shopImage: images.shop.clothes.sweater_m2_front
@@ -186,8 +186,8 @@ export const cloths: Cloth[] = [
 			'TOMMY HILFIGER CHINO'
 		],
 		heading: images.shop.heading.trouser,
-		price: 90,
-		size: 'XL',
+		price: 80,
+		size: 'XL - (36x34)',
 		pageImages: [images.shop.clothes.chinos_xl2_front, images.shop.clothes.chinos_xl2_rear],
 		shopImage: images.shop.clothes.chinos_xl2_front
 	},
@@ -195,7 +195,7 @@ export const cloths: Cloth[] = [
 		id: 'polo-m2',
 		description: ['PUT IT ON TO FIND OUT', 'Cyanotype on Cotton, 1/1', 'Gilden Heavyweight'],
 		heading: images.shop.heading.polo,
-		price: 45,
+		price: 35,
 		size: 'M',
 		pageImages: [images.shop.clothes.polo_m2_outside, images.shop.clothes.polo_m2_inside],
 		shopImage: images.shop.clothes.polo_m2_outside
@@ -204,7 +204,7 @@ export const cloths: Cloth[] = [
 		id: 'hoodie-l',
 		description: ['all over circles', 'Cyanotype on Cotton, 1/1', 'Gilden Heavyweight'],
 		heading: images.shop.heading.hoodie,
-		price: 120,
+		price: 90,
 		size: 'L',
 		pageImages: [images.shop.clothes.hoodie_l_front, images.shop.clothes.hoodie_l_rear],
 		shopImage: images.shop.clothes.hoodie_l_front
@@ -213,8 +213,8 @@ export const cloths: Cloth[] = [
 		id: 'chinos-l2',
 		description: ['five star chain trouser', 'Cyanotype, 1/1', '100% COTTON CHINO'],
 		heading: images.shop.heading.trouser,
-		price: 90,
-		size: 'L',
+		price: 80,
+		size: 'L - (30x32)',
 		pageImages: [images.shop.clothes.chinos_l2_front, images.shop.clothes.chinos_l2_rear],
 		shopImage: images.shop.clothes.chinos_l2_front
 	}
