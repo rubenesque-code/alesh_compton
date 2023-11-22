@@ -1,10 +1,9 @@
 <script lang="ts" context="module">
 	import { onMount } from 'svelte';
 
-	import { images } from '^assets/images';
-	import { storeVideoStore, type StoreVideoState, updateStoreVideo } from '^stores';
+	import { storeVideoStore, updateStoreVideo, type StoreVideoState } from '^stores';
 
-	import { Image } from '^components';
+	import { Chains } from '^components';
 	import { Clothes } from '^components/+pages/store';
 </script>
 
@@ -45,7 +44,7 @@
 
 <svelte:window bind:innerWidth={windowWidth} />
 
-<Image meta={images.shop.chain} />
+<Chains />
 
 <div class="pb-xl">
 	<div class="grid place-items-center p-md">
@@ -66,9 +65,9 @@
 		<a class="uppercase mt-md" href="/store/info">Info</a>
 	</div>
 
-	<Image meta={images.shop.chain} />
+	<Chains />
 
 	<Clothes />
 
-	<Image meta={images.shop.chain} />
+	<Chains />
 </div>
