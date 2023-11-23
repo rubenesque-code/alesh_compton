@@ -9,6 +9,7 @@ export type Cloth = {
 	size: string;
 	pageImages: ImgMeta[];
 	shopImage: ImgMeta;
+	buyLink: string;
 };
 
 export const cloths: Cloth[] = [
@@ -23,16 +24,18 @@ export const cloths: Cloth[] = [
 		price: 35,
 		size: 'M',
 		pageImages: [images.shop.clothes.polo_m3_outside, images.shop.clothes.polo_m3_inside],
-		shopImage: images.shop.clothes.polo_m3_outside
+		shopImage: images.shop.clothes.polo_m3_outside,
+		buyLink: 'https://buy.stripe.com/fZe3fq94x0Msfwk28a'
 	},
 	{
 		id: 'chinos-xl1',
 		description: ['CAN BE USED IN THE OFFICE/CLUB', 'Cyanotype, 1/1', 'DOCKERS CHINO'],
 		heading: images.shop.heading.trouser,
 		price: 80,
-		size: 'XL - (36x32)',
+		size: 'XL - 36x32',
 		pageImages: [images.shop.clothes.chinos_xl1_front, images.shop.clothes.chinos_xl1_rear],
-		shopImage: images.shop.clothes.chinos_xl1_front
+		shopImage: images.shop.clothes.chinos_xl1_front,
+		buyLink: 'https://buy.stripe.com/7sIaHS1C59iYfwk9AD'
 	},
 	{
 		id: 'hoodie-xl1',
@@ -41,16 +44,18 @@ export const cloths: Cloth[] = [
 		price: 90,
 		size: 'XL',
 		pageImages: [images.shop.clothes.hoodie_xl_front, images.shop.clothes.hoodie_xl_rear],
-		shopImage: images.shop.clothes.hoodie_xl_front
+		shopImage: images.shop.clothes.hoodie_xl_front,
+		buyLink: 'https://buy.stripe.com/4gwdU43Kddze97W7sw'
 	},
 	{
 		id: 'jeans-xs',
 		description: ['EXTRAORDINARYJEANS.EBU', 'Cyanotype, 1/1', 'UNIQLO JEANS'],
 		heading: images.shop.heading.jeans,
 		price: 80,
-		size: 'XS - (28x26)',
+		size: 'XS - 28x26',
 		pageImages: [images.shop.clothes.jeans_xs_front, images.shop.clothes.jeans_xs_rear],
-		shopImage: images.shop.clothes.jeans_xs_front
+		shopImage: images.shop.clothes.jeans_xs_front,
+		buyLink: 'https://buy.stripe.com/00g03e0y10Ms3NC7sx'
 	},
 	{
 		id: 'jeans-s',
@@ -61,9 +66,10 @@ export const cloths: Cloth[] = [
 		],
 		heading: images.shop.heading.jeans,
 		price: 80,
-		size: 'S - (28x28)',
+		size: 'S - 28x28',
 		pageImages: [images.shop.clothes.jeans_s_front, images.shop.clothes.jeans_s_rear],
-		shopImage: images.shop.clothes.jeans_s_front
+		shopImage: images.shop.clothes.jeans_s_front,
+		buyLink: 'https://buy.stripe.com/28o2bma8BeDi83S9AG'
 	},
 	{
 		id: 'hoodie-xl2',
@@ -72,16 +78,18 @@ export const cloths: Cloth[] = [
 		price: 90,
 		size: 'XL',
 		pageImages: [images.shop.clothes.hoodie_xl2_front, images.shop.clothes.hoodie_xl2_rear],
-		shopImage: images.shop.clothes.hoodie_xl2_front
+		shopImage: images.shop.clothes.hoodie_xl2_front,
+		buyLink: 'https://buy.stripe.com/28obLWfsV9iYac09AH'
 	},
 	{
 		id: 'jeans-xs2',
 		description: ['HEART DETAIL BEHIND', 'Cyanotype, 1/1', 'UNIQLO JEANS'],
 		heading: images.shop.heading.jeans,
 		price: 80,
-		size: 'XS - (24x25)',
+		size: 'XS - 24x25',
 		pageImages: [images.shop.clothes.jeans_xs2_front, images.shop.clothes.jeans_xs2_rear],
-		shopImage: images.shop.clothes.jeans_xs2_front
+		shopImage: images.shop.clothes.jeans_xs2_front,
+		buyLink: 'https://buy.stripe.com/14k4jubcFbr697W289'
 	},
 	{
 		id: 'sweater-m1',
@@ -90,7 +98,8 @@ export const cloths: Cloth[] = [
 		price: 60,
 		size: 'M',
 		pageImages: [images.shop.clothes.sweater_m_front, images.shop.clothes.sweater_m_rear],
-		shopImage: images.shop.clothes.sweater_m_front
+		shopImage: images.shop.clothes.sweater_m_front,
+		buyLink: 'https://buy.stripe.com/dR65ny1C58eUac0bII'
 	},
 	{
 		id: 'polo-m1',
@@ -99,11 +108,12 @@ export const cloths: Cloth[] = [
 			'Cyanotype on Cotton, 1/1',
 			'Gilden Heavyweight'
 		],
-		heading: images.shop.heading.sweater,
+		heading: images.shop.heading.polo,
 		price: 35,
 		size: 'M',
 		pageImages: [images.shop.clothes.polo_m1_inside, images.shop.clothes.polo_m1_outside],
-		shopImage: images.shop.clothes.polo_m1_inside
+		shopImage: images.shop.clothes.polo_m1_inside,
+		buyLink: 'https://buy.stripe.com/4gwdU494x52Ick88wE'
 	},
 	{
 		id: 'sweater-l',
@@ -112,16 +122,18 @@ export const cloths: Cloth[] = [
 		price: 60,
 		size: 'L',
 		pageImages: [images.shop.clothes.sweater_l_front, images.shop.clothes.sweater_l_rear],
-		shopImage: images.shop.clothes.sweater_l_front
+		shopImage: images.shop.clothes.sweater_l_front,
+		buyLink: 'https://buy.stripe.com/4gw4judkN7aQ83S5kt'
 	},
 	{
 		id: 'chinos-l',
 		description: ['GUCCI??', 'Cyanotype, 1/1', 'GAP CHINO'],
 		heading: images.shop.heading.trouser,
 		price: 80,
-		size: 'L - (34x32)',
+		size: 'L - 34x32',
 		pageImages: [images.shop.clothes.chinos_l_front, images.shop.clothes.chinos_l_rear],
-		shopImage: images.shop.clothes.chinos_l_front
+		shopImage: images.shop.clothes.chinos_l_front,
+		buyLink: 'https://buy.stripe.com/eVaeY8bcF2UA1FucMW'
 	},
 	{
 		id: 'sweater-s',
@@ -130,16 +142,18 @@ export const cloths: Cloth[] = [
 		price: 60,
 		size: 'S',
 		pageImages: [images.shop.clothes.sweater_s_front, images.shop.clothes.sweater_s_rear],
-		shopImage: images.shop.clothes.sweater_s_front
+		shopImage: images.shop.clothes.sweater_s_front,
+		buyLink: 'https://buy.stripe.com/bIY17idkN2UAac000b'
 	},
 	{
 		id: 'jeans-m',
 		description: ['STRAIGHT CHAIN', 'Cyanotype, 1/1', 'UNIQLO jeans'],
 		heading: images.shop.heading.jeans,
 		price: 80,
-		size: 'M - (29x28)',
+		size: 'M - 29x28',
 		pageImages: [images.shop.clothes.jeans_m_front, images.shop.clothes.jeans_m_rear],
-		shopImage: images.shop.clothes.jeans_m_front
+		shopImage: images.shop.clothes.jeans_m_front,
+		buyLink: 'https://buy.stripe.com/bIY17idkN2UAac000b'
 	},
 	{
 		id: 'sweater-s2',
@@ -148,7 +162,8 @@ export const cloths: Cloth[] = [
 		price: 60,
 		size: 'S',
 		pageImages: [images.shop.clothes.sweater_s2_front, images.shop.clothes.sweater_s2_rear],
-		shopImage: images.shop.clothes.sweater_s2_front
+		shopImage: images.shop.clothes.sweater_s2_front,
+		buyLink: 'https://buy.stripe.com/4gw7vG6Wp7aQck88wJ'
 	},
 	{
 		id: 'polo-xs',
@@ -157,16 +172,18 @@ export const cloths: Cloth[] = [
 		price: 35,
 		size: 'XS',
 		pageImages: [images.shop.clothes.polo_xs_inside, images.shop.clothes.polo_xs_outside],
-		shopImage: images.shop.clothes.polo_xs_inside
+		shopImage: images.shop.clothes.polo_xs_inside,
+		buyLink: 'https://buy.stripe.com/00g2bma8B0Ms4RGfZc'
 	},
 	{
 		id: 'jeans-l',
 		description: ['GOOD OPPERTUNITY FOR TEAM PHOTO', 'Cyanotype, 1/1', 'UNIQLO JEANS'],
 		heading: images.shop.heading.jeans,
 		price: 80,
-		size: 'L - (32x30)',
+		size: 'L - 32x30',
 		pageImages: [images.shop.clothes.jeans_l_front, images.shop.clothes.jeans_l_rear],
-		shopImage: images.shop.clothes.jeans_l_front
+		shopImage: images.shop.clothes.jeans_l_front,
+		buyLink: 'https://buy.stripe.com/00g5ny1C5eDifwk4gv'
 	},
 
 	{
@@ -176,7 +193,8 @@ export const cloths: Cloth[] = [
 		price: 60,
 		size: 'M',
 		pageImages: [images.shop.clothes.sweater_m2_front, images.shop.clothes.sweater_m2_rear],
-		shopImage: images.shop.clothes.sweater_m2_front
+		shopImage: images.shop.clothes.sweater_m2_front,
+		buyLink: 'https://buy.stripe.com/5kAbLWgwZ8eUgAo6oE'
 	},
 	{
 		id: 'chinos-xl2',
@@ -187,9 +205,10 @@ export const cloths: Cloth[] = [
 		],
 		heading: images.shop.heading.trouser,
 		price: 80,
-		size: 'XL - (36x34)',
+		size: 'XL - 36x34',
 		pageImages: [images.shop.clothes.chinos_xl2_front, images.shop.clothes.chinos_xl2_rear],
-		shopImage: images.shop.clothes.chinos_xl2_front
+		shopImage: images.shop.clothes.chinos_xl2_front,
+		buyLink: 'https://buy.stripe.com/5kAbLWgwZ8eUgAo6oE'
 	},
 	{
 		id: 'polo-m2',
@@ -198,7 +217,8 @@ export const cloths: Cloth[] = [
 		price: 35,
 		size: 'M',
 		pageImages: [images.shop.clothes.polo_m2_outside, images.shop.clothes.polo_m2_inside],
-		shopImage: images.shop.clothes.polo_m2_outside
+		shopImage: images.shop.clothes.polo_m2_outside,
+		buyLink: 'https://buy.stripe.com/cN27vGa8BfHm6ZO28q'
 	},
 	{
 		id: 'hoodie-l',
@@ -207,15 +227,17 @@ export const cloths: Cloth[] = [
 		price: 90,
 		size: 'L',
 		pageImages: [images.shop.clothes.hoodie_l_front, images.shop.clothes.hoodie_l_rear],
-		shopImage: images.shop.clothes.hoodie_l_front
+		shopImage: images.shop.clothes.hoodie_l_front,
+		buyLink: 'https://buy.stripe.com/8wM6rC5Sl0Msck8cN5'
 	},
 	{
 		id: 'chinos-l2',
 		description: ['five star chain trouser', 'Cyanotype, 1/1', '100% COTTON CHINO'],
 		heading: images.shop.heading.trouser,
 		price: 80,
-		size: 'L - (30x32)',
+		size: 'L - 30x32',
 		pageImages: [images.shop.clothes.chinos_l2_front, images.shop.clothes.chinos_l2_rear],
-		shopImage: images.shop.clothes.chinos_l2_front
+		shopImage: images.shop.clothes.chinos_l2_front,
+		buyLink: 'https://buy.stripe.com/14k2bm5SlfHmfwk5kE'
 	}
 ];

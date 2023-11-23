@@ -36,10 +36,11 @@
 		}, 50);
 	});
 
-	const src =
-		windowWidth && windowWidth > 768
-			? '/videos/treadmill-optimised_40.webm'
-			: '/videos/treadmill-optimised_60.webm';
+	$: src = !windowWidth
+		? null
+		: windowWidth <= 768
+		? '/videos/treadmill-optimised_60.webm'
+		: '/videos/treadmill-optimised_27_lib264.mp4';
 </script>
 
 <svelte:window bind:innerWidth={windowWidth} />
@@ -49,17 +50,19 @@
 <div class="pb-xl">
 	<div class="grid place-items-center p-md">
 		<div class="aspect-video w-full max-w-[1200px] bg-gray-100">
-			<!-- svelte-ignore a11y-media-has-caption -->
-			<video
-				width="100%"
-				height="100%"
-				muted
-				loop
-				bind:paused
-				on:click={updateStoreVideo.togglePause}
-			>
-				<source {src} type="video/webm" />
-			</video>
+			{#if src}
+				<!-- svelte-ignore a11y-media-has-caption -->
+				<video
+					width="100%"
+					height="100%"
+					muted
+					loop
+					bind:paused
+					on:click={updateStoreVideo.togglePause}
+				>
+					<source {src} type="video/webm" />
+				</video>
+			{/if}
 		</div>
 
 		<a class="uppercase mt-md" href="/store/info">Info</a>

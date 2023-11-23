@@ -78,11 +78,6 @@
 		class="flex flex-col"
 		style:height={`${screenWidth >= 768 ? `${bodyHeight}px` : 'auto'}`}
 		style:margin-top="{pageLayoutValues.headerHeight}px"
-		on:scroll={(e) => {
-			updatePageLayoutValue.scrollTopPrevious(pageLayoutValues.scrollTopCurrent);
-
-			updatePageLayoutValue.scrollTopCurrent(e.currentTarget.scrollTop);
-		}}
 	>
 		<div class="flex-grow">
 			<slot />

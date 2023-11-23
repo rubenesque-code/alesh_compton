@@ -20,6 +20,7 @@ export default {
 				md: '768px',
 				'md/lg': '896px',
 				lg: '1024px',
+				'lg/xl': '1202px',
 				xl: '1280px',
 				'2xl': '1536px',
 				'3xl': '1800px'

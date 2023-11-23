@@ -78,17 +78,19 @@
 
 				<p class="text-lg">£{data.price}</p>
 
-				<button
+				<a
 					class="text-lg w-[100px]"
 					style:aspect-ratio={images.shop.buy_button.img.w / images.shop.buy_button.img.h}
+					href={data.buyLink}
+					target="_blank"
 				>
 					<Image meta={images.shop.buy_button} />
-				</button>
+				</a>
 			</div>
 
 			{#if imageContainerHeight}
 				<div
-					class=" mt-sm flex-grow overflow-auto pb-lg hidden md:block"
+					class="ml-2xl mt-sm flex-grow overflow-auto pb-lg hidden md:block"
 					bind:this={imageScrollNode}
 				>
 					<div class="flex gap-md">

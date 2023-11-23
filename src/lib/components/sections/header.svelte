@@ -10,7 +10,7 @@
 </script>
 
 <header
-	class="shrink-0 flex justify-between gap-1.5xl items-start px-md py-md bg-white"
+	class="shrink-0 flex justify-between gap-1.5xl items-center px-md py-md bg-white"
 	bind:clientHeight={headerHeight}
 >
 	<div class="flex items-center gap-xs/sm shrink-0">
@@ -19,11 +19,11 @@
 		<a class="uppercase tracking-wide" href="/">Alesh Compton</a>
 	</div>
 
-	<div class="hidden md/lg:block">
+	<div class="hidden lg/xl:flex items-center">
 		<MenuLarge />
 	</div>
 
-	<div class="md/lg:hidden">
+	<div class="lg/xl:hidden">
 		<MenuSmall bind:headerHeight />
 	</div>
 </header>
