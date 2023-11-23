@@ -31,6 +31,16 @@
 		}
 	}
 
+	let scrollY = 0;
+
+	const onScroll = (scrollTop: number) => {
+		updatePageLayoutValue.scrollTopPrevious(pageLayoutValues.scrollTopCurrent);
+
+		updatePageLayoutValue.scrollTopCurrent(scrollTop);
+	};
+
+	$: onScroll(scrollY);
+
 	$: scrollDirection =
 		!pageLayoutValues.scrollTopPrevious ||
 		pageLayoutValues.scrollTopPrevious < pageLayoutValues.scrollTopCurrent
@@ -51,7 +61,7 @@
 	<meta name="description" content="Alesh Compton's Art Portfolio and Clothes Shop" />
 </svelte:head>
 
-<svelte:window bind:innerHeight={screenHeight} bind:innerWidth={screenWidth} />
+<svelte:window bind:innerHeight={screenHeight} bind:innerWidth={screenWidth} bind:scrollY />
 
 <div
 	class="fixed left-0 top-0 z-30 w-full transition-transform duration-300 ease-in-out"
@@ -68,6 +78,11 @@
 		class="flex flex-col"
 		style:height={`${screenWidth >= 768 ? `${bodyHeight}px` : 'auto'}`}
 		style:margin-top="{pageLayoutValues.headerHeight}px"
+		on:scroll={(e) => {
+			updatePageLayoutValue.scrollTopPrevious(pageLayoutValues.scrollTopCurrent);
+
+			updatePageLayoutValue.scrollTopCurrent(e.currentTarget.scrollTop);
+		}}
 	>
 		<div class="flex-grow">
 			<slot />
