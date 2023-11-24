@@ -1,5 +1,5 @@
 <script lang="ts" context="module">
-	import { Image } from '$lib/components';
+	import { CalcMaxDimensions, Image } from '$lib/components';
 	import type { Image as Data } from '^data/portfolio';
 	import { calcMaxDimensions } from '^helpers';
 	import { quintOut } from 'svelte/easing';
@@ -42,19 +42,13 @@
 	let screenWidth: number;
 	let screenHeight: number;
 
-	let transfromedDimensions: { width: number; height: number };
-
-	$: {
-		if (screenHeight && screenWidth) {
-			transfromedDimensions = calcMaxDimensions({
-				parent: { width: screenWidth, height: screenHeight },
-				initial: { width: data.img.w, height: data.img.h }
-			});
-		}
-	}
+	let transformedDimensions: { width: number; height: number };
 </script>
 
-<svelte:window bind:innerWidth={screenWidth} bind:innerHeight={screenHeight} />
+<CalcMaxDimensions
+	initial={{ width: data.img.w, height: data.img.h }}
+	bind:transformed={transformedDimensions}
+/>
 
 <!-- svelte-ignore a11y-click-events-have-key-events -->
 <!-- svelte-ignore a11y-no-static-element-interactions -->
@@ -85,8 +79,8 @@
 		>
 			<div
 				class="relative"
-				style:height="{transfromedDimensions.height}px"
-				style:width="{transfromedDimensions.width}px"
+				style:height="{transformedDimensions.height}px"
+				style:width="{transformedDimensions.width}px"
 				in:receiveImg={{ key: id }}
 				out:sendImg={{ key: id }}
 			>
