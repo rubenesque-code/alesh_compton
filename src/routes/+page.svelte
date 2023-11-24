@@ -20,7 +20,7 @@
 
 	onMount(() => {
 		// below is a workaround for autoplay not working with bind:paused.
-		// if paused=true on payge mount, need to pause then unpause.
+		// if paused=true on mount, need to pause then unpause.
 		if (!storeVideo.paused) {
 			setTimeout(() => {
 				updateStoreVideo.togglePause();
@@ -67,6 +67,7 @@
 					loop
 					playsinline
 					controls
+					autoplay
 					bind:paused
 					on:click={updateStoreVideo.togglePause}
 				>
