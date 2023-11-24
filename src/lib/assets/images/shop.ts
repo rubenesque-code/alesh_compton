@@ -108,10 +108,12 @@ const heading = {
 
 import chain from '^^assets/images/shop/chain.jpg?w=7162&format=avif;webp;jpg&as=picture&imagetools';
 import buy_button from '^^assets/images/shop/buy now Button.jpg?w=477&format=avif;webp;jpg&as=picture&imagetools';
+import treadmill_poster from '^^assets/images/shop/treadmill-poster-resized.jpg?w=1600&format=avif;webp;jpg&as=picture&imagetools';
 
 export const shop = {
 	chain: chain as ImgMeta,
 	buy_button: buy_button as ImgMeta,
+	treadmill_poster: treadmill_poster as ImgMeta,
 	clothes,
 	heading
 };

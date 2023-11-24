@@ -68,6 +68,7 @@
 					playsinline
 					controls
 					autoplay
+					poster="/videos/treadmill-poster-resized.jpg"
 					bind:paused
 					on:click={updateStoreVideo.togglePause}
 				>
