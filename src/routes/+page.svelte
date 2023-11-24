@@ -36,6 +36,9 @@
 		}, 50);
 	});
 
+	// 366226
+	// 366266
+
 	$: src = !windowWidth
 		? null
 		: windowWidth <= 768
@@ -57,6 +60,7 @@
 					height="100%"
 					muted
 					loop
+					playsinline
 					bind:paused
 					on:click={updateStoreVideo.togglePause}
 				>
