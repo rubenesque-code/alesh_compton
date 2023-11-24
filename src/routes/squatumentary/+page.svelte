@@ -3,4 +3,4 @@
 	import { portfolio } from '^data';
 </script>
 
-<PageContent data={portfolio.estat_du_france} />
+<PageContent data={portfolio.squatumentary} />

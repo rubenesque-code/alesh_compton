@@ -1,20 +1,20 @@
 export function calcMaxDimensions({
-	parent,
-	child
+	transformContainer,
+	initial
 }: {
-	parent: { width: number; height: number };
-	child: { width: number; height: number };
+	transformContainer: { width: number; height: number };
+	initial: { width: number; height: number };
 }) {
-	const parentAspectRatio = parent.width / parent.height;
-	const childAspectRatio = child.width / child.height;
+	const parentAspectRatio = transformContainer.width / transformContainer.height;
+	const childAspectRatio = initial.width / initial.height;
 
 	let maxWidth: number, maxHeight: number;
 
 	if (childAspectRatio > parentAspectRatio) {
-		maxWidth = parent.width;
+		maxWidth = transformContainer.width;
 		maxHeight = maxWidth / childAspectRatio;
 	} else {
-		maxHeight = parent.height;
+		maxHeight = transformContainer.height;
 		maxWidth = maxHeight * childAspectRatio;
 	}
 

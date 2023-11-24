@@ -1,6 +1,6 @@
 <script>
-	import { PortfolioLayout } from '^layouts';
+	import { PageContent } from '^pages/portfolio';
 	import { portfolio } from '^data';
 </script>
 
-<PortfolioLayout data={portfolio.brexit} />
+<PageContent data={portfolio.brexit} />

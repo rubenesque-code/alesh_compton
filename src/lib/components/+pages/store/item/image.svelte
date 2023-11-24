@@ -7,7 +7,6 @@
 </script>
 
 <script lang="ts">
-	export let imageContainerHeight: number;
 	export let data: Data['image'];
 	export let id: string;
 	export let loading: 'eager' | 'lazy';
@@ -49,7 +48,7 @@
 		if (screenHeight && screenWidth) {
 			transfromedDimensions = calcMaxDimensions({
 				parent: { width: screenWidth, height: screenHeight },
-				child: { width: data.img.w, height: data.img.h }
+				initial: { width: data.img.w, height: data.img.h }
 			});
 		}
 	}
@@ -60,14 +59,12 @@
 <!-- svelte-ignore a11y-click-events-have-key-events -->
 <!-- svelte-ignore a11y-no-static-element-interactions -->
 <div
-	class="shrink-0 relative bg-gray-50"
-	style:height="{data.img.h}px"
-	style:max-height="{imageContainerHeight - 20}px"
+	class="shrink-0 w-full md:w-[50vw] xl:w-auto xl:h-[60vh] xl:min-h-[600px] min-w-[300px] relative bg-gray-50"
 	style:aspect-ratio={data.img.w / data.img.h}
 >
 	{#if transformStatus === 'idle' || transformStatus === 'closing'}
 		<div
-			class="absolute w-full h-full cursor-pointer"
+			class="absolute w-full h-full cursor-zoom-in"
 			on:click={() => {
 				if (transformStatus === 'idle' || transformStatus === 'closing') {
 					handleOpenImage();

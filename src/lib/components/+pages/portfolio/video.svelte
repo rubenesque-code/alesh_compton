@@ -14,6 +14,11 @@
 	export let id: string;
 	export let loading: 'eager' | 'lazy';
 
+	let screenWidth: number;
+	let screenHeight: number;
+
+	let transformedDimensions: { width: number; height: number };
+
 	let transformStatus: 'idle' | 'opening' | 'open' | 'closing' = 'idle';
 
 	const [sendImg, receiveImg] = crossfade({
@@ -21,23 +26,6 @@
 		easing: quintOut,
 		delay: 0
 	});
-
-	let screenWidth: number;
-	let screenHeight: number;
-
-	let transfromedDimensions: { width: number; height: number };
-
-	$: {
-		if (screenHeight && screenWidth) {
-			const clickOutsideTextHeight = 20;
-			const containerMaxHeight = screenHeight - clickOutsideTextHeight;
-
-			transfromedDimensions = calcMaxDimensions({
-				parent: { width: screenWidth, height: containerMaxHeight },
-				child: { width: 1280, height: 720 }
-			});
-		}
-	}
 
 	const handleOpen = () => {
 		transformStatus = 'opening';
@@ -58,10 +46,31 @@
 			}
 		}, 1200);
 	};
+
+	$: {
+		if (screenHeight && screenWidth) {
+			const clickOutsideTextHeight = 20;
+			const containerMaxHeight = screenHeight - clickOutsideTextHeight;
+
+			transformedDimensions = calcMaxDimensions({
+				transformContainer: { width: screenWidth, height: containerMaxHeight },
+				initial: { width: 1280, height: 720 }
+			});
+		}
+	}
+
+	$: {
+		if (document) {
+			document.addEventListener('keydown', (event: KeyboardEvent) => {
+				if (event.key === 'Escape') {
+					handleClose();
+				}
+			});
+		}
+	}
 </script>
 
 <svelte:window bind:innerWidth={screenWidth} bind:innerHeight={screenHeight} />
-
 <!-- svelte-ignore a11y-click-events-have-key-events -->
 <!-- svelte-ignore a11y-no-static-element-interactions -->
 <div
@@ -92,7 +101,7 @@
 			<div>
 				<div
 					class="relative"
-					style:width="{transfromedDimensions.width}px"
+					style:width="{transformedDimensions.width}px"
 					style:aspect-ratio={16 / 9}
 					in:receiveImg={{ key: id }}
 					out:sendImg={{ key: id }}

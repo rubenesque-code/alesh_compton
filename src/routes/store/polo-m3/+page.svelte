@@ -1,11 +1,11 @@
 <script lang="ts" context="module">
 	import { cloths } from '^data/shop';
 
-	import { ShopItemLayout } from '^components/layouts';
+	import { PageContent } from '^components/+pages/store/item';
 </script>
 
 <script lang="ts">
 	const data = cloths.find((cloth) => cloth.id === 'polo-m3')!;
 </script>
 
-<ShopItemLayout {data} />
+<PageContent {data} />

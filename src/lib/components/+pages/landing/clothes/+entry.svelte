@@ -45,6 +45,8 @@
 			for (let i = 0; i < itemRows.length; i++) {
 				const itemRow = itemRows[i];
 
+				// const isLastRow = i === itemRows.length - 1;
+
 				const totalItemsWidthForRow = (totalItemsWidthPerRow * itemRow.length) / itemsPerRow;
 
 				const aspectRatios = itemRow.map((cloth) => {
@@ -84,7 +86,12 @@
 			{#each itemRows as row, i}
 				<div class="flex justify-between flex-wrap">
 					{#each row as item, j}
-						<a style:width="{itemRowsWidths[i][j] - 2}px" href={`/store/${item.id}`}>
+						{@const applyLastItemWorkaround =
+							(itemsPerRow === 2 || itemsPerRow === 4) && i === itemRows.length - 1}
+						<a
+							style:width="{(itemRowsWidths[i][j] - 2) * (!applyLastItemWorkaround ? 1 : 0.7)}px"
+							href={`/store/${item.id}`}
+						>
 							<div
 								class="bg-gray-100"
 								style:aspect-ratio={item.shopImage.img.w / item.shopImage.img.h}
