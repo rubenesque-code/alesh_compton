@@ -39,11 +39,17 @@
 	// 366226
 	// 366266
 
-	$: src = !windowWidth
+	$: srcMp4 = !windowWidth
 		? null
 		: windowWidth <= 768
 		? '/videos/treadmill-optimised_35_lib264.mp4'
 		: '/videos/treadmill-optimised_27_lib264.mp4';
+
+	$: srcWebm = !windowWidth
+		? null
+		: windowWidth <= 768
+		? '/videos/treadmill-optimised_60.webm'
+		: '/videos/treadmill-optimised_30.webm';
 </script>
 
 <svelte:window bind:innerWidth={windowWidth} />
@@ -53,18 +59,19 @@
 <div class="pb-xl">
 	<div class="grid place-items-center p-md">
 		<div class="aspect-video w-full max-w-[1200px] bg-gray-100">
-			{#if src}
-				<!-- svelte-ignore a11y-media-has-caption -->
+			{#if srcMp4}
 				<video
 					width="100%"
 					height="100%"
 					muted
 					loop
 					playsinline
+					controls
 					bind:paused
 					on:click={updateStoreVideo.togglePause}
 				>
-					<source {src} type="video/webm" />
+					<source src={srcMp4} type="video/mp4" />
+					<source src={srcWebm} type="video/webm" />
 				</video>
 			{/if}
 		</div>
