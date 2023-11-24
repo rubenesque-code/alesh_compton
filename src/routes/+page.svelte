@@ -39,7 +39,7 @@
 	$: src = !windowWidth
 		? null
 		: windowWidth <= 768
-		? '/videos/treadmill-optimised_60.webm'
+		? '/videos/treadmill-optimised_35_lib264.mp4'
 		: '/videos/treadmill-optimised_27_lib264.mp4';
 </script>
 
