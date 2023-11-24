@@ -89,7 +89,7 @@
 								class="bg-gray-100"
 								style:aspect-ratio={item.shopImage.img.w / item.shopImage.img.h}
 							>
-								<Image meta={item.shopImage} imageClass="" />
+								<Image meta={item.shopImage} />
 							</div>
 
 							<div class="flex flex-wrap gap-x-sm gap-y-xxs justify-center mt-lg">

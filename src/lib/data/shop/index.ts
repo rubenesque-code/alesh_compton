@@ -208,7 +208,7 @@ export const cloths: Cloth[] = [
 		size: 'XL - 36x34',
 		pageImages: [images.shop.clothes.chinos_xl2_front, images.shop.clothes.chinos_xl2_rear],
 		shopImage: images.shop.clothes.chinos_xl2_front,
-		buyLink: 'https://buy.stripe.com/5kAbLWgwZ8eUgAo6oE'
+		buyLink: 'https://buy.stripe.com/9AQeY8cgJ66M2Jy6oF'
 	},
 	{
 		id: 'polo-m2',
