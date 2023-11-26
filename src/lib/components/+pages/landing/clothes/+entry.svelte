@@ -89,7 +89,7 @@
 						{@const applyLastItemWorkaround =
 							(itemsPerRow === 2 || itemsPerRow === 4) && i === itemRows.length - 1}
 						<a
-							style:width="{(itemRowsWidths[i][j] - 2) * (!applyLastItemWorkaround ? 1 : 0.7)}px"
+							style:width="{(itemRowsWidths[i][j] - 2) * (!applyLastItemWorkaround ? 1 : 0.65)}px"
 							href={`/store/${item.id}`}
 						>
 							<div

@@ -1,7 +1,7 @@
 <script lang="ts" context="module">
 	import type { PortfolioData } from '^data/portfolio';
 
-	import { smoothScroll } from '^helpers';
+	import { smoothWheelScroll } from '^helpers';
 
 	import Image from './image.svelte';
 	import Video from './video.svelte';
@@ -16,9 +16,25 @@
 
 	$: {
 		if (imageScrollNode) {
-			imageScrollNode.addEventListener('wheel', (e) => smoothScroll(imageScrollNode, e, 400), {
+			imageScrollNode.addEventListener('wheel', (e) => smoothWheelScroll(imageScrollNode, e, 400), {
 				passive: false
 			});
+		}
+	}
+
+	$: {
+		if (document && imageScrollNode) {
+			document.addEventListener(
+				'keydown',
+				(e) => {
+					if (e.key === 'ArrowLeft' || e.key === 'ArrowRight') {
+						imageScrollNode.focus();
+					}
+				},
+				{
+					passive: false
+				}
+			);
 		}
 	}
 </script>

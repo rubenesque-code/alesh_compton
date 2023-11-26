@@ -1,5 +1,8 @@
 <script lang="ts" context="module">
+	import { afterNavigate, goto } from '$app/navigation';
 	import { ArrowFatLeft } from 'phosphor-svelte';
+
+	import { smoothWheelScroll } from '^helpers';
 
 	import { images } from '^assets/images';
 	import type { Cloth } from '^data/shop';
@@ -19,31 +22,51 @@
 
 	$: {
 		if (imageScrollNode) {
-			imageScrollNode.style.scrollBehavior = 'smooth';
-
-			imageScrollNode.addEventListener('wheel', (event) => {
-				event.preventDefault();
-
-				const scrollAmount =
-					event.deltaY >= 0
-						? imageScrollNode.scrollLeft + event.deltaY + 200
-						: imageScrollNode.scrollLeft + event.deltaY - 200;
-
-				imageScrollNode.scrollTo({
-					left: scrollAmount,
-					behavior: 'smooth'
-				});
+			imageScrollNode.addEventListener('wheel', (e) => smoothWheelScroll(imageScrollNode, e, 400), {
+				passive: false
 			});
 		}
 	}
+
+	$: {
+		if (document && imageScrollNode) {
+			document.addEventListener(
+				'keydown',
+				(e) => {
+					if (e.key === 'ArrowLeft' || e.key === 'ArrowRight') {
+						imageScrollNode.focus();
+					}
+				},
+				{
+					passive: false
+				}
+			);
+		}
+	}
+
+	let previousPageWasStore: boolean;
+
+	afterNavigate(({ from }) => {
+		previousPageWasStore = from?.route.id === '/';
+	});
 </script>
 
 <svelte:window bind:innerHeight={screenHeight} />
 
-<a class="flex items-center gap-xs uppercase tracking-wide" href="/">
+<button
+	class="flex items-center gap-xs uppercase tracking-wide"
+	on:click={() => {
+		if (previousPageWasStore) {
+			history.back();
+		} else {
+			goto('/');
+		}
+	}}
+	type="button"
+>
 	<span class="text-2xl"><ArrowFatLeft weight="fill" /></span>
 	<span class="text-lg">Store</span>
-</a>
+</button>
 
 <div class="w-[300px] mt-lg" style:aspect-ratio={data.heading.img.w / data.heading.img.h}>
 	<Image meta={data.heading} />

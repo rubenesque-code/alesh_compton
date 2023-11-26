@@ -1,4 +1,8 @@
-export function smoothScroll(container: HTMLElement, event: WheelEvent, duration: number = 1000) {
+export function smoothWheelScroll(
+	container: HTMLElement,
+	event: WheelEvent,
+	duration: number = 1000
+) {
 	const startX = container.scrollLeft;
 	const startTime = performance.now();
 
@@ -8,6 +12,7 @@ export function smoothScroll(container: HTMLElement, event: WheelEvent, duration
 		// const easeInOutQuad = (t: number) => (t < 0.5 ? 2 * t * t : -1 + (4 - 2 * t) * t);
 
 		const scrollAmount = event.deltaY >= 0 ? event.deltaY + 300 : event.deltaY - 300;
+		console.log('scrollAmount:', scrollAmount);
 
 		container.scrollLeft = startX + scrollAmount * progress;
 		// container.scrollLeft = startX + scrollAmount * easeInOutQuad(progress);

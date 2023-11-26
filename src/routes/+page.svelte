@@ -36,9 +36,6 @@
 		}, 50);
 	});
 
-	// 366226
-	// 366266
-
 	$: srcMp4 = !windowWidth
 		? null
 		: windowWidth <= 768
@@ -58,7 +55,7 @@
 
 <div class="pb-xl">
 	<div class="grid place-items-center p-md">
-		<div class="aspect-video w-full max-w-[1200px] bg-gray-100">
+		<div class="aspect-video w-full max-w-[1400px] bg-gray-100">
 			{#if srcMp4}
 				<video
 					width="100%"
