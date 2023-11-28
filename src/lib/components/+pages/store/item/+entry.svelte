@@ -84,16 +84,19 @@
 
 		<p class="text-lg">SIZE - {data.size}</p>
 
-		<p class="text-lg">£{data.price}</p>
+		<!-- <p class="text-lg">£{data.price}</p> -->
+		<p class="text-lg">{data.price === 'sold' ? 'sold' : `£${data.price}`}</p>
 
-		<a
-			class="text-lg w-[100px]"
-			style:aspect-ratio={images.shop.buy_button.img.w / images.shop.buy_button.img.h}
-			href={data.buyLink}
-			target="_blank"
-		>
-			<Image meta={images.shop.buy_button} />
-		</a>
+		{#if typeof data.price === 'number'}
+			<a
+				class="text-lg w-[100px]"
+				style:aspect-ratio={images.shop.buy_button.img.w / images.shop.buy_button.img.h}
+				href={data.buyLink}
+				target="_blank"
+			>
+				<Image meta={images.shop.buy_button} />
+			</a>
+		{/if}
 	</div>
 
 	{#if imageContainerHeight}

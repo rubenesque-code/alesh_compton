@@ -5,7 +5,7 @@ export type Cloth = {
 	id: string;
 	description: string[];
 	heading: ImgMeta;
-	price: number;
+	price: number | 'sold';
 	size: string;
 	pageImages: ImgMeta[];
 	shopImage: ImgMeta;
@@ -21,7 +21,8 @@ export const cloths: Cloth[] = [
 			'Gilden Heavyweight'
 		],
 		heading: images.shop.heading.polo,
-		price: 35,
+		price: 'sold',
+		// price: 35,
 		size: 'M',
 		pageImages: [images.shop.clothes.polo_m3_outside, images.shop.clothes.polo_m3_inside],
 		shopImage: images.shop.clothes.polo_m3_outside,
@@ -109,7 +110,8 @@ export const cloths: Cloth[] = [
 			'Gilden Heavyweight'
 		],
 		heading: images.shop.heading.polo,
-		price: 35,
+		price: 'sold',
+		// price: 35,
 		size: 'M',
 		pageImages: [images.shop.clothes.polo_m1_inside, images.shop.clothes.polo_m1_outside],
 		shopImage: images.shop.clothes.polo_m1_inside,

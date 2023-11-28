@@ -45,8 +45,6 @@
 			for (let i = 0; i < itemRows.length; i++) {
 				const itemRow = itemRows[i];
 
-				// const isLastRow = i === itemRows.length - 1;
-
 				const totalItemsWidthForRow = (totalItemsWidthPerRow * itemRow.length) / itemsPerRow;
 
 				const aspectRatios = itemRow.map((cloth) => {
@@ -100,7 +98,8 @@
 							</div>
 
 							<div class="flex flex-wrap gap-x-sm gap-y-xxs justify-center mt-lg">
-								<p>£{item.price}</p>
+								<p>{item.price === 'sold' ? 'sold' : `£${item.price}`}</p>
+								<!-- <p>£{item.price === 'sold' ? 'sold' : item.price}</p> -->
 								<p class="whitespace-nowrap">({item.size})</p>
 							</div>
 						</a>
