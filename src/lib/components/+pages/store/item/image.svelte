@@ -1,7 +1,6 @@
 <script lang="ts" context="module">
 	import { CalcMaxDimensions, Image } from '$lib/components';
 	import type { Image as Data } from '^data/portfolio';
-	import { calcMaxDimensions } from '^helpers';
 	import { quintOut } from 'svelte/easing';
 	import { crossfade, fade } from 'svelte/transition';
 </script>
