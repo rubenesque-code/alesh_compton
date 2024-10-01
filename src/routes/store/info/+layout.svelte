@@ -3,7 +3,7 @@
 </script>
 
 <div class="px-md pb-xl">
-	<a class="flex items-center gap-xs uppercase tracking-wide" href="/">
+	<a class="flex items-center gap-xs uppercase tracking-wide" href="/store">
 		<span class="text-2xl"><ArrowFatLeft weight="fill" /></span>
 		<span>Store</span>
 	</a>

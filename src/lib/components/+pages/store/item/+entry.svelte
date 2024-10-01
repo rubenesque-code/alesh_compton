@@ -47,7 +47,7 @@
 	let previousPageWasStore: boolean;
 
 	afterNavigate(({ from }) => {
-		previousPageWasStore = from?.route.id === '/';
+		previousPageWasStore = from?.route.id === '/store';
 	});
 </script>
 

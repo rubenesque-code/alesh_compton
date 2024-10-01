@@ -1,4 +1,4 @@
-<a href="/squatumentary">Squatumentary</a>
+<a href="/">Squatumentary</a>
 <a href="/paintings">Paintings</a>
 <a href="/brexit">brexit</a>
 <a href="/estat-du-france">estat du france</a>
@@ -7,7 +7,8 @@
 <a href="/various-video">various video</a>
 
 <div class="h-[13px] w-[1.5px] bg-gray-600" />
-<a href="/">store</a>
+
+<a href="/store">store</a>
 
 <style>
 	a {
