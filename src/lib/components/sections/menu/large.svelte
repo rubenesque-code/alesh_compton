@@ -23,7 +23,9 @@
 				>
 					<a class="md:text-[13px] whitespace-nowrap" href="/">Squatumentary</a>
 
-					<!-- <a class="md:text-[13px]" href="/peoples-recovery-project">People's Recovery Project</a> -->
+					<a class="md:text-[13px] whitespace-nowrap" href="/the-peoples-recovery-project"
+						>People's Recovery Project</a
+					>
 
 					<a class="md:text-[13px] whitespace-nowrap" href="/estat-du-france">estat du france</a>
 
@@ -39,10 +41,10 @@
 				</div>
 			{/if}
 		</div>
+
 		<a class="md:text-[14px] top-label" href="/paintings">Paintings</a>
-		<!-- <a class="md:text-[14px]" href="/painters-touch">painters touch</a> -->
+
 		<a class="md:text-[14px] top-label" href="/television-god">television god</a>
-		<!-- <a class="md:text-[14px]" href="/various-video">various video</a> -->
 
 		<div class="h-[13px] w-[1.5px] bg-gray-600" />
 

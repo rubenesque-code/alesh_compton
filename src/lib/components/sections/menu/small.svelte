@@ -8,6 +8,7 @@
 	} from 'svelte-gestures';
 	import type { Action } from 'svelte/action';
 	import { PaperPlaneRight, InstagramLogo } from 'phosphor-svelte';
+
 	import { navigating } from '$app/stores';
 
 	import { contact } from '^data';
@@ -81,6 +82,10 @@
 
 				<div class="pl-4 flex gap-sm flex-col items-center mt-4">
 					<a class="whitespace-nowrap" href="/">Squatumentary</a>
+
+					<a class="whitespace-nowrap" href="/the-peoples-recovery-project"
+						>People's Recovery Project</a
+					>
 
 					<a class="whitespace-nowrap" href="/estat-du-france">estat du france</a>
 
