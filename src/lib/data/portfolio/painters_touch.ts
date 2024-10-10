@@ -4,7 +4,7 @@ import type { PortfolioData } from './_types';
 export const painters_touch: PortfolioData = {
 	title: 'Painters Touch - Mary Lydon',
 	description:
-		'On 17/03/2020 Mary Lydon painted a mural at the abandoned Lennox Castle in Scotland. The Video follows Mary as she describes her relationship between music and painting.<br/><br/>Sound by Ralph Taylor',
+		'On 17/03/2020 Mary Lydon painted a mural at the abandoned Lennox Castle in Scotland. The Video follows Mary as she describes her relationship between music and painting.<br/><br/>Sound by Ralph Taylor<br /><br /><br />ペインターズ・タッチ - メアリー・ライドン<br /><br />2020 年 3 月 17 日、メアリー・ライドンはスコットランドの放棄されたレノックス城に壁画を描きました。このビデオでは、メアリーが音楽と絵画の関係について説明します。<br /><br />サウンド：ラルフ・テイラー',
 	media: [
 		{
 			type: 'youtube-video',

@@ -16,14 +16,14 @@
 	<div class="flex items-center gap-xs/sm shrink-0">
 		<Image meta={images.logo} imageClass="w-[30px]" />
 
-		<a class="uppercase tracking-wide" href="/">Alesh Compton</a>
+		<a class="uppercase tracking-wide md:text-[14px]" href="/">Alesh Compton</a>
 	</div>
 
-	<div class="hidden lg/xl:flex items-center">
+	<div class="hidden sm/md:flex items-center">
 		<MenuLarge />
 	</div>
 
-	<div class="lg/xl:hidden">
+	<div class="sm/md:hidden">
 		<MenuSmall bind:headerHeight />
 	</div>
 </header>

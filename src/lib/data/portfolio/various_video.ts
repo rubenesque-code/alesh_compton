@@ -23,6 +23,11 @@ export const various_video: PortfolioData = {
 		},
 		{
 			type: 'youtube-video',
+			url: 'https://youtu.be/2OLpbUdwcjw?si=k9FkmVO4Hr4sybpI',
+			image: images.various_video.roam_ii
+		},
+		{
+			type: 'youtube-video',
 			url: 'https://youtu.be/kz_RFnhKheA',
 			image: images.various_video.kurukuru_yt_thumbnail
 		},

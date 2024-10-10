@@ -1,4 +1,5 @@
 import { images } from '^assets/images';
+
 import type { PortfolioData } from './_types';
 
 export const squatumentary: PortfolioData = {

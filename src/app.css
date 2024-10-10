@@ -10,10 +10,6 @@
 	font-display: swap;
 }
 
-/* html {
-	@apply overflow-hidden  outline-none active:outline-none focus:outline-none;
-} */
-
 * {
 	@apply outline-none active:outline-none focus:outline-none font-thin text-sm;
 
@@ -23,7 +19,3 @@
 ::selection {
 	@apply bg-gray-500 text-white;
 }
-
-/* div {
-	@apply md:scrollbar-thin md:scrollbar-track-gray-50/50 md:scrollbar-thumb-gray-100 md:hover:scrollbar-thumb-gray-200;
-} */

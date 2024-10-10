@@ -12,8 +12,6 @@
 
 	import { contact } from '^data';
 
-	import PageLinks from './page-links.svelte';
-
 	const swipe: Action<
 		HTMLElement,
 		ParametersSwitch<SwipeParameters>,
@@ -77,7 +75,32 @@
 			}
 		}}
 	>
-		<div class="flex flex-col items-center gap-md"><PageLinks /></div>
+		<div class="flex flex-col items-center gap-md">
+			<div class="relative flex flex-col items-center">
+				<h3 class="text-[12px] top-label">video</h3>
+
+				<div class="pl-4 flex gap-sm flex-col items-center mt-4">
+					<a class="whitespace-nowrap" href="/">Squatumentary</a>
+
+					<a class="whitespace-nowrap" href="/estat-du-france">estat du france</a>
+
+					<a class="whitespace-nowrap" href="/brexit">brexit</a>
+
+					<a class="whitespace-nowrap" href="/painters-touch">painters touch</a>
+
+					<a class="whitespace-nowrap" href="/various-video">various video</a>
+				</div>
+			</div>
+
+			<div class="h-[13px] w-[1.5px] bg-gray-600" />
+
+			<a class="top-label" href="/paintings">Paintings</a>
+			<a class="top-label" href="/television-god">television god</a>
+
+			<div class="h-[13px] w-[1.5px] bg-gray-600" />
+
+			<a class="md:text-[14px] top-label" href="/store">store</a>
+		</div>
 
 		<div class="mt-xl mb-lg flex flex-col items-center gap-md">
 			<div class="flex flex-col items-center gap-xxs">
@@ -102,7 +125,7 @@
 		@apply uppercase tracking-wider;
 	}
 
-	a {
+	.top-label {
 		@apply uppercase tracking-wide;
 	}
 </style>
