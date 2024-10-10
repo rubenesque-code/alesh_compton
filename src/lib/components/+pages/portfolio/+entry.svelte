@@ -62,19 +62,9 @@
 			>
 				{#each data.media as media, i}
 					{#if media.type === 'image'}
-						<Image
-							data={media.image}
-							id={`image-${i}`}
-							bind:imageContainerHeight
-							loading={i === 0 ? 'eager' : 'lazy'}
-						/>
+						<Image data={media.image} id={`image-${i}`} loading={i === 0 ? 'eager' : 'lazy'} />
 					{:else}
-						<Video
-							data={media}
-							id={`image-${i}`}
-							bind:imagesContainerHeight={imageContainerHeight}
-							loading={i === 0 ? 'eager' : 'lazy'}
-						/>
+						<Video data={media} id={`image-${i}`} loading={i === 0 ? 'eager' : 'lazy'} />
 					{/if}
 				{/each}
 			</div>

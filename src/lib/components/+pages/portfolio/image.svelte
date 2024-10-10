@@ -8,7 +8,6 @@
 </script>
 
 <script lang="ts">
-	export let imageContainerHeight: number;
 	export let data: Data['image'];
 	export let id: string;
 	export let loading: 'eager' | 'lazy';
@@ -61,12 +60,7 @@
 
 <!-- svelte-ignore a11y-click-events-have-key-events -->
 <!-- svelte-ignore a11y-no-static-element-interactions -->
-<div
-	class="shrink-0 relative bg-gray-50"
-	style:height="{data.img.h}px"
-	style:max-height="{imageContainerHeight - 20}px"
-	style:aspect-ratio={data.img.w / data.img.h}
->
+<div class="shrink-0 relative bg-gray-50" style:aspect-ratio={data.img.w / data.img.h}>
 	{#if transformStatus === 'idle' || transformStatus === 'closing'}
 		<div
 			class="absolute w-full h-full cursor-pointer"
@@ -100,3 +94,6 @@
 		</div>
 	{/if}
 </div>
+
+<!-- style:height="{data.img.h}px" -->
+<!-- style:max-height="{imageContainerHeight - 20}px" -->

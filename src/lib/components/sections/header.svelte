@@ -14,7 +14,7 @@
 	bind:clientHeight={headerHeight}
 >
 	<div class="flex items-center gap-xs/sm shrink-0">
-		<Image meta={images.logo} imageClass="w-[30px]" />
+		<Image meta={images.logo} imageClass="xs/sm:w-[36px] w-[30px]" />
 
 		<a class="uppercase tracking-wide md:text-[14px]" href="/">Alesh Compton</a>
 	</div>
