@@ -5,6 +5,36 @@
 
 	import { Chains } from '^components';
 	import { Clothes } from '^components/+pages/landing';
+
+	const jsonld = {
+		'@context': 'https://schema.org',
+		'@type': 'WebPage',
+
+		name: 'Store',
+
+		breadcrumb: {
+			'@type': 'BreadcrumbList',
+			itemListElement: [
+				{
+					'@type': 'ListItem',
+					position: 1,
+					name: 'Home',
+					item: 'https://aleshcompton.com/'
+				},
+
+				{
+					'@type': 'ListItem',
+					position: 2,
+					name: 'Store',
+					item: 'https://aleshcompton.com/store'
+				}
+			]
+		}
+	};
+
+	const jsonldStr = JSON.stringify(jsonld);
+
+	let jsonldScript = `<script type="application/ld+json">${jsonldStr + '<'}/script>`;
 </script>
 
 <script lang="ts">
@@ -48,6 +78,10 @@
 		? '/videos/treadmill-optimised_60.webm'
 		: '/videos/treadmill-optimised_30.webm';
 </script>
+
+<svelte:head>
+	{@html jsonldScript}
+</svelte:head>
 
 <svelte:window bind:innerWidth={windowWidth} />
 
