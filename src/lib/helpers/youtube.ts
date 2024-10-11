@@ -1,6 +1,6 @@
 export const getYoutubeVideoIdFromUrl = (url: string) => {
 	// eslint-disable-next-line no-useless-escape
-	const regex = /.*(?:youtu.be\/|v\/|u\/\w\/|embed\/|watch\?v=)([^#\&\?]*).*/;
+	const regex = /.*(?:youtu.be\/|v\/|u\/\w\/|embed\/|shorts\/|watch\?v=)([^#\&\?]*).*/;
 	const match = url.match(regex);
 
 	if (!match) {
@@ -13,7 +13,6 @@ export const getYoutubeVideoIdFromUrl = (url: string) => {
 };
 
 
-// https://www.youtube.com/embed/bCWLp6D7WHg
 export const getYoutubeEmbedUrlFromId = (id: string) => {
 	const embedUrl = `https://www.youtube.com/embed/${id}`;
 

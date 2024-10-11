@@ -1,6 +1,6 @@
 <script lang="ts" context="module">
 	import { domain } from '^data';
-	import { getYouTubeEmbedUrl } from '^helpers';
+	import { getYoutubeEmbedFromUrl } from '^helpers';
 </script>
 
 <script lang="ts">
@@ -10,7 +10,7 @@
 		import.meta.env.PROD ? domain : ''
 	}`;
 
-	const src = getYouTubeEmbedUrl(url);
+	const src = getYoutubeEmbedFromUrl(url);
 </script>
 
 <!-- svelte-ignore a11y-missing-attribute -->
