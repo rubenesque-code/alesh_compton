@@ -23,11 +23,7 @@
 				>
 					<a class="md:text-[13px] whitespace-nowrap" href="/">Squatumentary</a>
 
-<<<<<<< Updated upstream
-					<a class="md:text-[13px] whitespace-nowrap" href="/the-peoples-recovery-project"
-=======
 					<a class="md:text-[13px] whitespace-nowrap" href="/peoples-recovery-project"
->>>>>>> Stashed changes
 						>People's Recovery Project</a
 					>
 
