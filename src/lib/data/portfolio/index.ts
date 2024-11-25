@@ -7,7 +7,7 @@ import { paintings } from './paintings';
 import { squatumentary } from './squatumentary';
 import { television_god } from './television_god';
 import { various_video } from './various_video';
-import { the_peoples_recovery_project } from "./the_peoples_recovery_project";
+import { the_peoples_recovery_project } from './peoples_recovery_project';
 
 export const portfolio = {
 	brexit,
