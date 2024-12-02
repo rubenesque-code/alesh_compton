@@ -5,3 +5,5 @@ import CalcMaxDimensions from './calc-max-dimensions.svelte';
 export { YoutubeIframe, Chains, CalcMaxDimensions };
 
 export * from './image';
+
+export * from './structured-data' 

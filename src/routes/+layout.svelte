@@ -58,6 +58,7 @@
 
 <svelte:head>
 	<title>Alesh Compton</title>
+
 	<meta name="description" content="Alesh Compton's Art Portfolio and Clothes Shop" />
 </svelte:head>
 
